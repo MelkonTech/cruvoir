@@ -100,7 +100,7 @@
     "build": "next build",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx ./components ./pages",
     "lint-css": "stylelint ./components/**/*.css ./pages/**/*.css ./static/**/*.css",
-    "start": "set NODE_ENV=production && node ./server.js",
+    "start": "NODE_ENV=production node ./server.js",
     "test": "jest --env=jsdom --no-cache --onlyChanged",
     "test:all": "jest --env=jsdom --no-cache",
     "test:watch": "jest --env=jsdom --watch",
