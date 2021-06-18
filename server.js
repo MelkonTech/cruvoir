@@ -3,7 +3,7 @@ const basicAuth = require('express-basic-auth')
 const express = require('express')
 const cookieParser = require('cookie-parser')
 const next = require('next')
-const port = parseInt(process.env.APP_PORT, 10) || 3000
+const port = process.env.PORT || 3000
 const host = process.env.APP_HOST || '127.0.0.1'
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({dev})
