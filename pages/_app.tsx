@@ -76,7 +76,6 @@ class App extends NextApp<{apollo: ApolloClient<InMemoryCache>, portalManager: P
     } catch(error) {
       console.error('Error while fetching meta tags')
       console.error(publicRuntimeConfig)
-      console.error(process.env)
       console.error(error)
     }
 
