@@ -1,0 +1,211 @@
+.pureHtml {
+  display: grid;
+  row-gap: 12px;
+  align-content: start;
+  /* stylelint-disable selector-nested-pattern, selector-max-type, selector-combinator-whitelist */
+  & h1 {
+    display: block;
+    line-height: 46px;
+    font-size: 34px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #777;
+  }
+  & h2 {
+    display: block;
+    line-height: 26px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #777;
+  }
+  & h3 {
+    display: block;
+    line-height: 16px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #777;
+  }
+  & p {
+    display: block;
+    line-height: 16px;
+    font-size: 11px;
+    color: #777;
+  }
+  & :matches(ul, ol) {
+    display: grid;
+    row-gap: 12px;
+    align-content: start;
+    padding-left: 14px;
+    & > li {
+      display: list-item;
+      list-style-position: outside;
+      line-height: 16px;
+      font-size: 11px;
+      color: #777;
+    }
+  }
+  & ul {
+
+  }
+  & ol {
+
+  }
+  & a {
+    display: inline;
+    text-decoration: var(--text-decoration);
+    cursor: pointer;
+    &:not(:hover) {
+      --text-decoration: underline;
+    }
+    &:hover {
+      --text-decoration: none;
+    }
+  }
+  & strong {
+    display: inline;
+    font-weight: 700;
+  }
+  & i {
+    font-style: italic;
+  }
+  & table {
+    table-layout: fixed;
+    display: table;
+    border-collapse: collapse;
+    /* stylelint-disable selector-no-qualifying-type */
+    &:global.columns--2 {
+      --column-1-width: 50%;
+      --column-2-width: 50%;
+    }
+    &:global.columns--3 {
+      --column-1-width: 50%;
+      --column-2-width: 25%;
+      --column-3-width: 25%;
+    }
+    &:global.columns--4 {
+      --column-1-width: 25%;
+      --column-2-width: 25%;
+      --column-3-width: 25%;
+      --column-4-width: 25%;
+    }
+    /* stylelint-enable selector-no-qualifying-type */
+    & > tbody {
+      display: table-row-group;
+      & > tr {
+        display: table-row;
+        box-shadow: 0 -1px #eee inset;
+        & > td {
+          box-sizing: border-box;
+          display: table-cell;
+          padding-top: var(--padding);
+          padding-bottom: var(--padding);
+          line-height: 16px;
+          font-size: 11px;
+          word-break: break-word;
+          color: #777;
+          &:nth-of-type(n+2) {
+            padding-left: calc(var(--padding) / 2);
+          }
+          &:nth-last-of-type(n+2) {
+            padding-right: calc(var(--padding) / 2);
+          }
+          &:nth-of-type(1) {
+            width: var(--column-1-width);
+          }
+          &:nth-of-type(2) {
+            width: var(--column-2-width);
+          }
+          &:nth-of-type(3) {
+            width: var(--column-3-width);
+          }
+          &:nth-of-type(4) {
+            width: var(--column-4-width);
+          }
+        }
+      }
+    }
+  }
+  /* stylelint-enable selector-nested-pattern, selector-max-type, selector-combinator-whitelist */
+  @media (--t-max) {
+    /* stylelint-disable selector-nested-pattern, selector-max-type, selector-combinator-whitelist */
+    & h1 {
+
+    }
+    & h2 {
+
+    }
+    & h3 {
+
+    }
+    & p {
+
+    }
+    & ul {
+
+    }
+    & ol {
+
+    }
+    & a {
+
+    }
+    & strong {
+
+    }
+    & i {
+
+    }
+    & table {
+      & > tbody {
+        & > tr {
+          & > td {
+            --padding: 4px;
+          }
+        }
+      }
+    }
+    /* stylelint-enable selector-nested-pattern, selector-max-type, selector-combinator-whitelist */
+  }
+  @media (--l-min) {
+    /* stylelint-disable selector-nested-pattern, selector-max-type, selector-combinator-whitelist */
+    & h1 {
+
+    }
+    & h2 {
+
+    }
+    & h3 {
+
+    }
+    & p {
+
+    }
+    & ul {
+
+    }
+    & ol {
+
+    }
+    & a {
+
+    }
+    & strong {
+
+    }
+    & i {
+
+    }
+    & table {
+      & > tbody {
+        & > tr {
+          & > td {
+            --padding: 6px;
+          }
+        }
+      }
+    }
+    /* stylelint-enable selector-nested-pattern, selector-max-type, selector-combinator-whitelist */
+  }
+}

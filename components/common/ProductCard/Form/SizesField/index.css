@@ -1,0 +1,18 @@
+.sizesField:global {
+  --slider--list-gap: 4px;
+  --slider--list-slide-width: calc((100% - var(--slider--list-gap)) / 2);
+  --slider--list-width: calc(100% - var(--slider--navigation-button-size) * 2 - var(--slider--list-gap) * 2);
+  --slider--navigation-button-size: 26px;
+  --slider--navigation-button-icon-size: 8px;
+  --slider--navigation-button-icon-image: var(--icon--image-slider-next);
+  & > .list {
+
+  }
+  & > .navigation {
+    & > .button {
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px #1c1c1c inset;
+      opacity: var(--opacity);
+    }
+  }
+}

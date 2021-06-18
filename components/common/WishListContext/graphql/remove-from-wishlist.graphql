@@ -1,0 +1,14 @@
+mutation RemoveFromWishList($customerId: String!, $productId: String!) {
+  __typename
+
+  delete_wishlist(where: {product_id: {_eq: $productId}, customer_id: {_eq: $customerId}}) {
+    __typename
+
+    returning {
+      __typename
+      customer_id
+      id
+      product_id
+    }
+  }
+}

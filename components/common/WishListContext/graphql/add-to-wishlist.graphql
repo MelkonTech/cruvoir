@@ -1,0 +1,14 @@
+mutation AddToWishList($customerId: String!, $productId: String!) {
+  __typename
+
+  insert_wishlist(objects: {customer_id: $customerId, product_id: $productId}) {
+    __typename
+
+    returning {
+      __typename
+      id
+      customer_id
+      product_id
+    }
+  }
+}

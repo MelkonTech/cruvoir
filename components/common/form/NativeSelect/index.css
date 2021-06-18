@@ -1,0 +1,86 @@
+.select:global {
+  --field--error-message-color: #ff5038;
+  --field--input-border-inactive-color: #e5e5e5;
+  --field--input-border-active-color: #4b4b4b;
+  --field--input-color: #000;
+  --field--placehoder-color: #989898;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 34px;
+  &:not(.is-invalid) {
+    --error-message-opacity: 0;
+  }
+  &.is-invalid {
+    --error-message-opacity: 1;
+  }
+  &:not(:focus-within) {
+    &:not(.is-invalid) {
+      --input-box-shadow-color: var(--field--input-border-inactive-color);
+    }
+    &.is-invalid {
+      --input-box-shadow-color: var(--field--error-message-color);
+    }
+  }
+  &:focus-within {
+    --input-box-shadow-color: var(--field--input-border-active-color);
+  }
+  &:not(.is-disabled) {
+    --field--input-background-color: #fff;
+  }
+  &.is-disabled {
+    --field--input-background-color: #eee;
+  }
+  &:not(.is-uppercased) {
+    --text-transform: none;
+    --letter-spacing: inherit;
+  }
+  &.is-uppercased {
+    --text-transform: uppercase;
+    --letter-spacing: 1px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 12px;
+    height: 100%;
+    background-color: var(--field--input-color);
+    mask-image: var(--icon--image-dropdown-arrow);
+    mask-size: 8px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    pointer-events: none;
+  }
+  & > .input {
+    appearance: none;
+    display: block;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-right: 12px;
+    font-size: 10px;
+    text-transform: var(--text-transform);
+    letter-spacing: var(--letter-spacing);
+    color: var(--field--input-color);
+    background-color: var(--field--input-background-color);
+    box-shadow: 0 -1px var(--input-box-shadow-color) inset;
+    transition-property: background-color, box-shadow;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+  }
+  & > .error-message {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    line-height: 17px;
+    font-size: 10px;
+    color: var(--field--error-message-color);
+    opacity: var(--error-message-opacity);
+    transition-property: opacity;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+  }
+}

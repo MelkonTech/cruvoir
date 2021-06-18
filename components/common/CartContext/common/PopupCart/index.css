@@ -1,0 +1,109 @@
+.popupCart:global {
+  position: fixed;
+  z-index: 2;
+  right: calc(50% - min(50%, var(--common--main-column-width) / 2));
+  top: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px hsl(0 0% 0% / 25%);
+  & > .header {
+    display: grid;
+    column-gap: 8px;
+    grid-template-columns: 1fr 10fr 1fr;
+    align-items: center;
+    height: 60px;
+    padding-left: var(--common--main-horizontal-padding);
+    padding-right: var(--common--main-horizontal-padding);
+    box-shadow: 0 -1px #eee inset;
+    & > .title {
+      grid-column: 2;
+      line-height: 16px;
+      font-size: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1c1c1c;
+      & > .counter {
+        display: inline-block;
+        width: 18px;
+        margin-left: 4px;
+        padding-left: 2px;
+        padding-right: 2px;
+        line-height: 12px;
+        font-size: 10px;
+        text-align: center;
+        color: #fff;
+        background-color: var(--background-color);
+        border-radius: 1px;
+        transition-property: background-color;
+        transition-duration: .2s;
+        transition-timing-function: ease-in;
+        &:not(.is-active) {
+          --background-color: #a1a1a1;
+        }
+        &.is-active {
+          --background-color: #ff5038;
+        }
+      }
+    }
+    & > .button {
+      --icon--size: 14px;
+      --icon--color: #777;
+      grid-column: 3;
+      justify-self: end;
+      display: flex;
+      /* EDGE */
+      place-items: center;
+      place-content: center;
+      width: 24px;
+      height: 24px;
+      margin-right: -5px;
+      cursor: pointer;
+    }
+  }
+  & > .empty-message {
+
+  }
+  & > :matches(.content, .section) {
+    padding: 20px var(--common--main-horizontal-padding);
+  }
+  & > .content {
+    overflow: hidden auto;
+    display: block;
+    & > .item {
+      &:nth-of-type(n+2) {
+        margin-top: 20px;
+      }
+    }
+  }
+  & > .section {
+    display: grid;
+    gap: 20px 8px;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    box-shadow: 0 1px #eee inset;
+    & > .label {
+      line-height: 16px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1c1c1c;
+    }
+    & > .value {
+
+    }
+    & > .button {
+      grid-column: span 2;
+    }
+  }
+  @media (--t-max) {
+    left: 0;
+    bottom: 0;
+  }
+  @media (--l-min) {
+    width: 352px;
+    height: 532px;
+  }
+}

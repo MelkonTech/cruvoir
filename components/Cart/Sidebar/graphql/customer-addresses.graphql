@@ -1,0 +1,15 @@
+#import './_customer-address.graphql'
+
+query customerAddresses($customerAccessToken: String!) {
+  customer(customerAccessToken: $customerAccessToken) {
+    id
+
+    addresses(first: 100) {
+      edges {
+        node {
+         ..._customerAddress
+        }
+      }
+    }
+  }
+}

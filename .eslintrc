@@ -1,0 +1,3 @@
+{
+  "extends": "@ottofeller/eslint-config-ottofeller/react"
+}

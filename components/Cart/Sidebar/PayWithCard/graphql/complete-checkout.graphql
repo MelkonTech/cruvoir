@@ -1,0 +1,53 @@
+mutation CompleteCheckout($checkoutId: ID!, $payment: TokenizedPaymentInputV3!) {
+  checkoutCompleteWithTokenizedPaymentV3(checkoutId: $checkoutId, payment: $payment) {
+    checkout {
+      id
+    }
+
+    checkoutUserErrors {
+      code
+      field
+      message
+    }
+
+    payment {
+      amountV2 {
+        amount
+        currencyCode
+      }
+
+      checkout {
+        id
+      }
+
+      creditCard {
+        brand
+        expiryMonth
+        expiryYear
+        firstDigits
+        firstName
+        lastDigits
+        lastName
+        maskedNumber
+      }
+
+      transaction {
+        amountV2 {
+          amount
+          currencyCode
+        }
+
+        kind
+        statusV2
+        test
+      }
+
+      errorMessage
+      id
+      idempotencyKey
+      nextActionUrl
+      ready
+      test
+    }
+  }
+}

@@ -1,0 +1,25 @@
+#import "../../../common/graphql/_imageThumb.graphql"
+
+query Product($handle: String!, $selectedOptions: [SelectedOptionInput!]!) {
+  productByHandle(handle: $handle) {
+    id
+
+    images(first: 2) {
+      edges {
+        node {
+          ..._imageThumb
+          altText
+        }
+      }
+    }
+
+    title
+
+    variantBySelectedOptions(selectedOptions: $selectedOptions) {
+      id
+    }
+
+    vendor
+    tags
+  }
+}

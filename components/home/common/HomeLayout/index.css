@@ -1,0 +1,12 @@
+.homeLayout:global {
+  display: grid;
+  row-gap: 32px;
+  & > .promo {
+    margin-left: calc(var(--common--main-horizontal-padding) * -1);
+    margin-right: calc(var(--common--main-horizontal-padding) * -1);
+    margin-top: calc(var(--common--main-vertical-padding) * -1);
+  }
+  & > .section {
+
+  }
+}

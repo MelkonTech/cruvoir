@@ -1,0 +1,25 @@
+.form:global {
+  display: grid;
+  & > .field {
+
+  }
+  & > .button {
+    width: 34px;
+    height: 34px;
+    font-size: 10px;
+  }
+  @media (--t-max) {
+    gap: 16px;
+    grid-template-columns: minmax(0, 330px) auto;
+    & > .field {
+      grid-column: 1;
+    }
+    & > .button {
+
+    }
+  }
+  @media (--l-min) {
+    column-gap: 12px;
+    grid-template-columns: 220px 220px auto;
+  }
+}

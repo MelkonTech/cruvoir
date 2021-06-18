@@ -1,0 +1,41 @@
+fragment _product on Product {
+  id
+  descriptionHtml
+  handle
+
+  options {
+    id
+    name
+    values
+  }
+
+  productType
+  tags
+  title
+
+  variants(first: 100) {
+    edges {
+      node {
+        id
+        availableForSale
+
+        compareAtPriceV2 {
+          amount
+          currencyCode
+        }
+
+        selectedOptions {
+          name
+          value
+        }
+
+        priceV2 {
+          amount
+          currencyCode
+        }
+      }
+    }
+  }
+
+  vendor
+}

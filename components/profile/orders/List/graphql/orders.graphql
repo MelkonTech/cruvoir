@@ -1,0 +1,52 @@
+query Orders(
+  $customerAccessToken: String!,
+  $after: String,
+  $before: String,
+  $first: Int,
+  $last: Int,
+) {
+  customer(customerAccessToken: $customerAccessToken) {
+    id
+
+    orders(
+      after: $after,
+      before: $before,
+      first: $first,
+      last: $last,
+    ) {
+      edges {
+        cursor
+
+        node {
+          financialStatus
+          fulfillmentStatus
+          id
+          name
+          orderNumber
+          processedAt
+          statusUrl
+
+          lineItems(first: 250) {
+            edges {
+
+              node {
+                title
+                currentQuantity
+              }
+            }
+          }
+
+          totalPriceV2 {
+            amount
+            currencyCode
+          }
+        }
+      }
+
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}

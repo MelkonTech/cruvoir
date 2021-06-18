@@ -1,0 +1,18 @@
+#import "../../../common/graphql/_product.graphql"
+#import "../../../common/graphql/_imageThumb.graphql"
+
+query Product($handle: String!) {
+  productByHandle(handle: $handle) {
+    ..._product
+
+    images(first: 100) {
+      edges {
+        node {
+          ..._imageThumb
+          id
+          originalSrc
+        }
+      }
+    }
+  }
+}

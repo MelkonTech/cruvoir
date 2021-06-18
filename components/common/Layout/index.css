@@ -1,0 +1,29 @@
+.layout:global {
+  display: grid;
+  grid-template-columns: minmax(0, var(--common--main-column-width));
+  justify-content: center;
+  min-height: 100vh;
+  &:not(.has-hero) {
+    grid-template-rows: auto auto 1fr auto;
+  }
+  &.has-hero {
+    grid-template-rows: auto auto auto 1fr auto;
+  }
+  & > .anchor {
+    z-index: 1;
+  }
+  & > .header {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+  }
+  & > .hero {
+
+  }
+  & > .content {
+    padding: var(--common--main-vertical-padding) var(--common--main-horizontal-padding);
+  }
+  & > .footer {
+
+  }
+}

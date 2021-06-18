@@ -1,0 +1,16 @@
+.form:global {
+  display: grid;
+  align-content: space-between;
+  height: 134px;
+  padding-top: 16px;
+  & > .field {
+    /* Safari */
+    min-width: 0;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  & > .button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}

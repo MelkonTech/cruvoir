@@ -1,0 +1,38 @@
+.list:global {
+  overflow: hidden;
+  display: grid;
+  row-gap: inherit;
+  height: var(--height);
+  transition-property: height;
+  transition-duration: .2s;
+  transition-timing-function: ease-in;
+  &:not(.is-folded) {
+    --header-icon-rotate: -90deg;
+    --height: 456px;
+  }
+  &.is-folded {
+    --height: 24px;
+    --header-icon-rotate: 90deg;
+  }
+  & > .header {
+    &:not(.hover) {
+      --icon-opacity: 0;
+    }
+    &:hover {
+      --icon-opacity: 1;
+    }
+    & > .icon {
+      --icon--size: 8px;
+      --icon--color: #777;
+      display: inline-grid;
+      margin-left: 4px;
+      transform: rotate(var(--header-icon-rotate));
+      opacity: var(--icon-opacity);
+    }
+  }
+  & > .content {
+    display: grid;
+    row-gap: inherit;
+    margin-left: 12px;
+  }
+}

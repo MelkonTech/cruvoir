@@ -1,0 +1,48 @@
+.radio:global {
+  display: grid;
+  column-gap: 8px;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  cursor: pointer;
+  &:not(:hover) {
+    --caption-text-decoration: none;
+  }
+  &:hover {
+    --caption-text-decoration: underline;
+  }
+  &:not(:focus-within) {
+    --input-box-shadow-color: #d2d2d2;
+  }
+  &:focus-within {
+    --input-box-shadow-color: #4b4b4b;
+  }
+  & > .input {
+    --size: 18px;
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--field--input-background-color);
+    border-radius: 2px;
+    box-shadow:
+      0 0 0 1px var(--input-box-shadow-color) inset,
+      0 0 0 var(--box-shadow-spread-radius) var(--box-shadow-color) inset
+    ;
+    transition-property: background-color, box-shadow;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+    &:not(:checked) {
+      --box-shadow-spread-radius: 1px;
+      --box-shadow-color: #d2d2d2;
+    }
+    &:checked {
+      --box-shadow-spread-radius: calc(var(--size) / 2);
+      --box-shadow-color: #4b4b4b;
+    }
+  }
+  & > .caption {
+    line-height: 14px;
+    font-size: 10px;
+    text-decoration: var(--caption-text-decoration);
+    color: var(--field--input-color);
+  }
+}

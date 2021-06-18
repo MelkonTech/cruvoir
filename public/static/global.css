@@ -1,0 +1,65 @@
+@keyframes placeholder-animation {
+  0% {
+    opacity: .1;
+  }
+  50% {
+    opacity: .2;
+  }
+  100% {
+    opacity: .1;
+  }
+}
+:global(.placeholder-animation) {
+  animation-name: placeholder-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+:global(.styled-scrollbar) {
+  scrollbar-width: thin;
+  &:not(:hover) {
+    --scrollbar-width: 5px;
+  }
+  &:hover {
+    --scrollbar-width: 1px;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &:matches(::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb) {
+    background-clip: content-box;
+    &:horizontal {
+      border-top: var(--scrollbar-width) solid transparent;
+    }
+    &:vertical {
+      border-left: var(--scrollbar-width) solid transparent;
+    }
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #e5e5e5;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #1c1c1c;
+  }
+}
+:root {
+  /* stylelint-disable-next-line property-whitelist */
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden auto;
+  scroll-behavior: auto;
+  display: block;
+  & > body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    /* stylelint-disable-next-line selector-max-type */
+    & > div {
+      display: block;
+      min-height: inherit;
+    }
+  }
+}
+.intercom-container {
+  display: none;
+}

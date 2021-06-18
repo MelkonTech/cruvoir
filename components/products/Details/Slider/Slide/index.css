@@ -1,0 +1,32 @@
+.slide:global {
+  position: relative;
+  z-index: 0;
+  min-height: 0;
+  padding-top: 20px;
+  cursor: zoom-in;
+  & > .image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: inherit;
+    object-fit: scale-down;
+    object-position: center;
+  }
+  @media (--t-max) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: calc(14px + 16px + 14px);
+    &::before {
+      content: "";
+      display: block;
+      padding-top: calc(9 * 100% / 16);
+    }
+  }
+  @media (--l-min) {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: calc(20px + 72px + 30px);
+  }
+}

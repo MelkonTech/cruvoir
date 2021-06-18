@@ -1,0 +1,20 @@
+.promo:global {
+  display: grid;
+  gap: 2px;
+  @media (--t-max) {
+    grid-template-columns: repeat(2, 1fr);
+    & > .item {
+      --aspect-ratio-height: calc(var(--md-row-span) / var(--md-col-span) * 100%);
+      grid-column: var(--md-col-span) span;
+      grid-row: var(--md-row-span) span;
+    }
+  }
+  @media (--l-min) {
+    grid-template-columns: repeat(4, 1fr);
+    & > .item {
+      --aspect-ratio-height: calc(var(--lg-row-span) / var(--lg-col-span) * 100%);
+      grid-column: var(--lg-col-span) span;
+      grid-row: var(--lg-row-span) span;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.search:global {
+  visibility: var(--visibility);
+  display: grid;
+  column-gap: 12px;
+  grid-template-columns: auto 1fr auto;
+  align-content: center;
+  width: min(100vw, 680px);
+  height: 108px;
+  padding-left: var(--common--main-horizontal-padding);
+  padding-right: var(--common--main-horizontal-padding);
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 4px 16px hsl(0 0% 0% / 20%);
+  transform: scale(var(--scale));
+  opacity: var(--opacity);
+  transition-property: visibility, transform, opacity;
+  transition-duration: .2s;
+  transition-timing-function: ease-in;
+  pointer-events: var(--pointer-events);
+  &:not(.is-shown) {
+    --visibility: hidden;
+    --opacity: 0;
+    --pointer-events: none;
+  }
+  &.is-shown {
+    --visibility: inherit;
+    --opacity: 1;
+    --pointer-events: inherit;
+  }
+  & > .button {
+    --icon-size: 16px;
+    display: flex;
+    /* EDGE */
+    place-items: center;
+    place-content: center;
+    width: var(--width);
+    margin-left: -5px;
+    margin-right: -5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+    &.type--search {
+
+    }
+    &.type--clear {
+      transform: scale(var(--scale));
+      transition-property: transform;
+      transition-duration: .2s;
+      transition-timing-function: ease-in;
+      cursor: pointer;
+      pointer-events: var(--pointer-events);
+      &:not(.is-shown) {
+        --scale: 0;
+        --pointer-events: none;
+      }
+      &.is-shown {
+        --scale: 1;
+        --pointer-events: inherit;
+      }
+    }
+    & > .icon {
+      --icon--size: var(--icon-size);
+      --icon--color: #1c1c1c;
+    }
+  }
+  & > .field {
+    --field--input-border-inactive-color: #e5e5e5;
+    --field--input-border-active-color: #4b4b4b;
+    --field--input-color: #000;
+    --field--input-background-color: transparent;
+    &:not(:focus-within) {
+      --field--input-border-color: var(--field--input-border-inactive-color);
+    }
+    &:focus-within {
+      --field--input-border-color: var(--field--input-border-active-color);
+    }
+  }
+}

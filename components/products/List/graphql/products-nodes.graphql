@@ -1,0 +1,25 @@
+#import "../../../common/graphql/_product.graphql"
+#import "../../../common/graphql/_imageThumb.graphql"
+
+query ProductsNodes($ids: [ID!]!) {
+  nodes(ids: $ids) {
+    ...on Product {
+      ..._product
+
+      priceRange {
+        minVariantPrice {
+          amount
+        }
+      }
+
+      images(first: 2) {
+        edges {
+          node {
+            ..._imageThumb
+            altText
+          }
+        }
+      }
+    }
+  }
+}

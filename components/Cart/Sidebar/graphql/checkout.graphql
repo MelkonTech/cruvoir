@@ -1,0 +1,69 @@
+# WARN This query used only for checkout page, because availableShippingRates raise error if no shipping address
+query checkout($id: ID!) {
+  node(id: $id) {
+    id
+
+    ... on Checkout {
+      email
+      requiresShipping
+      ready
+      webUrl
+
+      subtotalPriceV2 {
+        amount
+        currencyCode
+      }
+
+      paymentDueV2 {
+        amount
+        currencyCode
+      }
+
+      totalTaxV2 {
+        amount
+        currencyCode
+      }
+
+      shippingAddress {
+        id
+        address1
+        address2
+        city
+        country
+        firstName
+        lastName
+        zip
+        phone
+        province
+        countryCodeV2
+        provinceCode
+      }
+
+      availableShippingRates {
+        ready
+
+        shippingRates {
+          handle
+
+          priceV2 {
+            amount
+            currencyCode
+          }
+
+          title
+        }
+      }
+
+      shippingLine {
+        handle
+
+        priceV2 {
+          amount
+          currencyCode
+        }
+
+        title
+      }
+    }
+  }
+}

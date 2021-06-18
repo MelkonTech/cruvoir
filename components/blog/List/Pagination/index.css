@@ -1,0 +1,33 @@
+.pagination:global {
+  display: grid;
+  column-gap: 32px;
+  grid-auto-flow: column;
+  justify-content: end;
+  & > .link {
+    opacity: var(--opacity);
+    transition-property: opacity;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+    pointer-events: var(--pointer-events);
+    &:not(.is-disabled) {
+      --icon-color: #323232;
+      --pointer-events: inherit;
+      &:not(:hover) {
+        --opacity: 1;
+      }
+      &:hover {
+        --opacity: .8;
+      }
+    }
+    &.is-disabled {
+      --opacity: 1;
+      --icon-color: #d2d2d2;
+      --pointer-events: none;
+    }
+    & > .icon {
+      --icon--size: 28px;
+      --icon--color: var(--icon-color);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+fragment _customerAddress on MailingAddress {
+  id
+  address1
+  address2
+  city
+  country
+  firstName
+  lastName
+  phone
+  province
+  zip
+  formatted
+}

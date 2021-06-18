@@ -1,0 +1,40 @@
+.form:global {
+  display: grid;
+  row-gap: 40px;
+  & > .field {
+
+  }
+  & > .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    & > .button {
+      &:nth-of-type(1) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &:nth-of-type(2) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+  @media (--t-max) {
+
+  }
+  @media (--l-min) {
+    column-gap: 28px;
+    grid-template-columns: 1fr 1fr;
+    & > .span--1 {
+      grid-column: span 1;
+    }
+    & > .span--2 {
+      grid-column: span 2;
+    }
+    & > .field {
+
+    }
+    & > .actions {
+
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.scrollToTopButton:global {
+  display: block;
+  height: 0;
+  & > .button {
+    --icon--size: 12px;
+    --icon--color: #fff;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    /* EDGE */
+    place-items: center;
+    place-content: center;
+    background-color: #ff5038;
+    transform: translateY(var(--translate-y));
+    opacity: var(--opacity);
+    transition-property: transform, opacity;
+    /* stylelint-disable-next-line time-min-milliseconds */
+    transition-duration: .1s;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+    contain: strict;
+    &:not(.is-shown) {
+      --translate-y: 48px;
+      --opacity: 0;
+    }
+    &.is-shown {
+      --translate-y: 0;
+      --opacity: 1;
+    }
+  }
+  @media (--t-max) {
+    & > .button {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  @media (--l-min) {
+    & > .button {
+      width: 28px;
+      height: 30px;
+    }
+  }
+}

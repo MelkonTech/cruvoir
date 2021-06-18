@@ -1,0 +1,13 @@
+:root {
+  --common--header-height: 36px;
+  @media (--t-max) {
+    --common--main-horizontal-padding: 16px;
+    --common--main-vertical-padding: 16px;
+    --common--main-column-width: 100%;
+  }
+  @media (--l-min) {
+    --common--main-horizontal-padding: 30px;
+    --common--main-vertical-padding: 30px;
+    --common--main-column-width: 1440px;
+  }
+}

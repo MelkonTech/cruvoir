@@ -1,0 +1,31 @@
+query locations {
+  deliveryProfiles(first: 100) {
+    edges {
+      node {
+        default
+        id
+        name
+
+        profileLocationGroups {
+          countriesInAnyZone {
+            country {
+              id
+
+              code {
+                countryCode
+              }
+
+              name
+
+              provinces {
+                code
+                id
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

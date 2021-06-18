@@ -1,0 +1,43 @@
+query Addresses(
+  $customerAccessToken: String!,
+  $after: String,
+  $before: String,
+  $first: Int,
+  $last: Int,
+) {
+  customer(customerAccessToken: $customerAccessToken) {
+    id
+
+    addresses(
+      after: $after,
+      before: $before,
+      first: $first,
+      last: $last,
+    ) {
+      edges {
+        cursor
+
+        node {
+          address1
+          address2
+          city
+          company
+          country
+          firstName
+          formatted(withCompany: true)
+          id
+          lastName
+          name
+          phone
+          province
+          zip
+        }
+      }
+
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}

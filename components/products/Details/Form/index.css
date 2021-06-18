@@ -1,0 +1,132 @@
+.form:global {
+  display: grid;
+  align-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  & > .section {
+    display: grid;
+    row-gap: 4px;
+    column-gap: 24px;
+    grid-template-columns: 1fr auto;
+    grid-auto-flow: row dense;
+    & > .vendor {
+      grid-column: 1 / 2;
+      line-height: 16px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1c1c1c;
+    }
+    & > .title {
+      grid-column: 1 / -1;
+      margin-top: 4px;
+      line-height: 16px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #777;
+    }
+    & > .price {
+      --price-with-compare-at--line-height: 16px;
+      --price-with-compare-at--font-size: 10px;
+      grid-column: 1 / -1;
+      margin-top: 4px;
+    }
+    & > .divider {
+      grid-column: 1 / -1;
+      height: 1px;
+      margin-top: 12px;
+      background-color: #e5e5e5;
+    }
+    & > .share {
+      grid-column: 1 / -1;
+      display: grid;
+      column-gap: 28px;
+      grid-auto-flow: column;
+      justify-content: start;
+      margin-top: 12px;
+      & > .button {
+        --size: 30px;
+        --icon--size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: var(--size);
+        height: var(--size);
+        margin: calc((var(--icon--size) - var(--size)) / 2);
+        cursor: pointer;
+        &:not(:hover) {
+          --icon--color: #777;
+        }
+        &:hover {
+          --icon--color: #1c1c1c;
+        }
+      }
+    }
+    & > .description {
+      grid-column: 1 / -1;
+      margin-top: 12px;
+      line-height: 16px;
+      font-size: 10px;
+      color: #777;
+      /* stylelint-disable-next-line selector-nested-pattern */
+      & > * {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: inherit;
+        font-size: inherit;
+        /* stylelint-disable-next-line selector-max-universal */
+        &:nth-child(n+2) {
+          margin-top: 12px;
+        }
+      }
+      /* stylelint-disable-next-line selector-nested-pattern, selector-combinator-whitelist */
+      & a {
+        color: inherit;
+        /* stylelint-disable-next-line selector-max-type */
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+    & > .wish {
+      --icon--size: 14px;
+      grid-column: 2 / -1;
+      width: 30px;
+      height: 30px;
+      margin: -8px;
+    }
+  }
+  & > .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    & > .field {
+
+    }
+    & > .button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  @media (--t-max) {
+    padding-left: 20px;
+    padding-right: 20px;
+    & > .section {
+
+    }
+    & > .actions {
+      margin: 20px -20px -30px;
+      & > .field {
+
+      }
+      & > .button {
+        border-top-right-radius: 0;
+      }
+    }
+  }
+  @media (--l-min) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}

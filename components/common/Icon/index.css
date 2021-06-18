@@ -1,0 +1,46 @@
+:root {
+  --icon--image-arrow-left: url("./assets/arrow-left.svg");
+  --icon--image-arrow-right: url("./assets/arrow-right.svg");
+  --icon--image-back-arrow: url("./assets/back-arrow.svg");
+  --icon--image-cart: url("./assets/cart.svg");
+  --icon--image-checkbox: url("./assets/checkbox.svg");
+  --icon--image-cross: url("./assets/cross.svg");
+  --icon--image-cross-thin: url("./assets/cross-thin.svg");
+  --icon--image-dropdown-arrow: url("./assets/dropdown-arrow.svg");
+  --icon--image-facebook: url("./assets/facebook.svg");
+  --icon--image-filter: url("./assets/filter.svg");
+  --icon--image-filter-to-close: url("./assets/filter-to-close.svg");
+  --icon--image-filter-to-open: url("./assets/filter-to-open.svg");
+  --icon--image-instagram: url("./assets/instagram.svg");
+  --icon--image-loading: url("./assets/loading.svg");
+  --icon--image-menu: url("./assets/menu.svg");
+  --icon--image-minus: url("./assets/minus.svg");
+  --icon--image-next-arrow: url("./assets/next-arrow.svg");
+  --icon--image-pinterest: url("./assets/pinterest.svg");
+  --icon--image-scroll-to-top-arrow: url("./assets/scroll-to-top-arrow.svg");
+  --icon--image-search: url("./assets/search.svg");
+  --icon--image-slider-next: url("./assets/slider-next.svg");
+  --icon--image-speaker: url("./assets/speaker.svg");
+  --icon--image-tumblr: url("./assets/tumblr.svg");
+  --icon--image-twitter: url("./assets/twitter.svg");
+  --icon--image-user: url("./assets/user.svg");
+  --icon--image-wish: url("./assets/wish.svg");
+  --icon--color-wish: #c2a661;
+  --icon--image-wish-fill: url("./assets/wish-fill.svg");
+  --icon--color-wish-fill: #c2a661;
+  --icon--image-zoom: url("./assets/zoom.svg");
+}
+.icon:global {
+  display: block;
+  width: var(--icon--size);
+  height: var(--icon--size);
+  background-color: var(--icon--color, var(--color));
+  mask-image: var(--icon--image, var(--image));
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transition-duration: .2s;
+  transition-timing-function: ease-in;
+  pointer-events: none;
+  contain: strict;
+}

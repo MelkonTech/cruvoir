@@ -1,0 +1,48 @@
+.field:global {
+  --field--error-message-color: #ff5038;
+  --field--input-border-inactive-color: #e5e5e5;
+  --field--input-border-active-color: #4b4b4b;
+  --field--input-color: #000;
+  --field--placehoder-color: #989898;
+  position: relative;
+  display: block;
+  width: 100%;
+  &:not(.is-invalid) {
+    --error-message-opacity: 0;
+  }
+  &.is-invalid {
+    --error-message-opacity: 1;
+  }
+  &:not(:focus-within) {
+    &:not(.is-invalid) {
+      --field--input-border-color: var(--field--input-border-inactive-color);
+    }
+    &.is-invalid {
+      --field--input-border-color: var(--field--error-message-color);
+    }
+  }
+  &:focus-within {
+    --field--input-border-color: var(--field--input-border-active-color);
+  }
+  &:not(.is-disabled) {
+    --field--input-background-color: #fff;
+  }
+  &.is-disabled {
+    --field--input-background-color: #eee;
+  }
+  & > .error-message {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    line-height: 16px;
+    font-size: 10px;
+    color: var(--field--error-message-color);
+    opacity: var(--error-message-opacity);
+    transition-property: opacity;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.item:global {
+  position: relative;
+  display: grid;
+  column-gap: 40px;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 14px 20px;
+  background-color: var(--background-color);
+  box-shadow: 0 0 0 1px #eee inset;
+  transition-property: background-color;
+  transition-duration: .2s;
+  transition-timing-function: ease-in;
+  &:not(:hover) {
+    --background-color: transparent;
+  }
+  &:hover {
+    --background-color: #f8f8f8;
+  }
+  & > .section {
+    display: grid;
+    row-gap: 6px;
+    & > :matches(.name, .phone, .address) {
+      line-height: 16px;
+      font-size: 10px;
+      color: #777;
+    }
+    & > .name {
+
+    }
+    & > .phone {
+
+    }
+    & > .address {
+
+    }
+  }
+  & > .buttons {
+    display: grid;
+    & > .wrapper {
+      & > .button {
+        line-height: 16px;
+        font-size: 10px;
+        color: #777;
+      }
+    }
+  }
+  & > .loading-layer {
+    --loading--background-color: hsl(0 0% 100% / 50%);
+  }
+  & > .error-message {
+    grid-column: 1 / -1;
+    display: grid;
+    row-gap: 12px;
+    & > .row {
+      line-height: 16px;
+      font-size: 10px;
+      text-align: right;
+      letter-spacing: .32px;
+      color: #bc1b1b;
+    }
+  }
+  @media (--t-max) {
+    & > .section {
+
+    }
+    & > .buttons {
+      row-gap: 12px;
+      justify-items: center;
+    }
+    & > .loading-layer {
+
+    }
+    & > .error-message {
+
+    }
+  }
+  @media (--l-min) {
+    & > .section {
+
+    }
+    & > .buttons {
+      column-gap: inherit;
+      grid-auto-flow: column;
+    }
+    & > .loading-layer {
+
+    }
+    & > .error-message {
+
+    }
+  }
+}

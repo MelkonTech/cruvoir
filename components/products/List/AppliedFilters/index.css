@@ -1,0 +1,49 @@
+.appliedFilters:global {
+  & > .wrapper {
+    --gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: calc(var(--gap) / 2 * -1);
+    & > :matches(.item, .button-wrapper) {
+      margin: calc(var(--gap) / 2);
+    }
+    & > .item {
+
+    }
+    & > .button-wrapper {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      & > .wrapper {
+        & > .button {
+          display: block;
+          line-height: 16px;
+          font-size: 10px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: var(--color);
+          transition-property: color;
+          transition-duration: .2s;
+          transition-timing-function: ease-in;
+          &:not(:hover) {
+            --color: #777;
+          }
+          &:hover {
+            --color: #000;
+          }
+        }
+      }
+    }
+  }
+  @media (--t-max) {
+    &:not(.is-shown) {
+      display: none;
+    }
+    &.is-shown {
+      display: block;
+    }
+  }
+  @media (--l-min) {
+    display: block;
+  }
+}

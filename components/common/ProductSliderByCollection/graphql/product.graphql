@@ -1,0 +1,23 @@
+#import "../../graphql/_product.graphql"
+#import "../../graphql/_imageThumb.graphql"
+
+query Product($handle: String!) {
+  collectionByHandle(handle: $handle) {
+    products(first: 25) {
+      edges {
+        node {
+          ..._product
+
+          images(first: 2) {
+            edges {
+              node {
+                ..._imageThumb
+                altText
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

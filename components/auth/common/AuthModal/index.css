@@ -1,0 +1,229 @@
+.authModal:global {
+  overflow: hidden auto;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: grid;
+  /* Safari */
+  grid-template-rows: 100vh;
+  & > :matches(.background, .window) {
+    grid-area: 1 / 1 / -1 / -1;
+  }
+  & > .background {
+    background-color: hsl(0 0% 0% / .45);
+  }
+  & > .window {
+    position: relative;
+    display: grid;
+    align-content: start;
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+    & > .header {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      & > :matches(.button, .title) {
+        display: flex;
+        /* EDGE */
+        place-items: center;
+        place-content: center;
+        line-height: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      & > .button {
+        color: var(--color);
+        box-shadow: 0 -1px var(--box-shadow-color) inset;
+        transition-property: color, box-shadow;
+        transition-duration: .2s;
+        transition-timing-function: ease-in;
+        cursor: pointer;
+        &:not(.is-selected) {
+          --box-shadow-color: #eee;
+          &:not(:hover) {
+            --color: #6e6e6e;
+          }
+          &:hover {
+            --color: #262626;
+          }
+        }
+        &.is-selected {
+          --color: #262626;
+          --box-shadow-color: #000;
+        }
+      }
+      & > .title {
+        color: #262626;
+        box-shadow: 0 -1px #eee inset;
+      }
+    }
+    & > .content {
+      display: grid;
+      & > .form {
+        display: grid;
+        gap: 28px 16px;
+        grid-template-columns: 1fr 1fr;
+        & > .span--1 {
+          grid-column: span 1;
+        }
+        & > .span--2 {
+          grid-column: span 2;
+        }
+        & > .field {
+          justify-self: start;
+        }
+        & > .text-button {
+          justify-self: end;
+          align-self: center;
+          line-height: 16px;
+          text-decoration: var(--text-decoration);
+          color: #262626;
+          cursor: pointer;
+          &:not(:hover) {
+            --text-decoration: underline;
+          }
+          &:hover {
+            --text-decoration: none;
+          }
+        }
+        & > .note {
+          line-height: 16px;
+          color: #262626;
+          & > .text-button {
+            text-decoration: var(--text-decoration);
+            color: #2e2e2e;
+            cursor: pointer;
+            &:not(:hover) {
+              --text-decoration: underline;
+            }
+            &:hover {
+              --text-decoration: none;
+            }
+          }
+        }
+        & > .error-message {
+          display: grid;
+          row-gap: 12px;
+          & > .row {
+            line-height: 16px;
+            font-size: 10px;
+            text-align: center;
+            letter-spacing: .32px;
+            color: #bc1b1b;
+          }
+        }
+        & > .button {
+
+        }
+      }
+      & > .close-button {
+        justify-self: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        line-height: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: var(--text-decoration);
+        letter-spacing: 1px;
+        color: #262626;
+        cursor: pointer;
+        &:not(:hover) {
+          --text-decoration: underline;
+        }
+        &:hover {
+          --text-decoration: none;
+        }
+      }
+    }
+  }
+  @media (--t-max) {
+    & > .background {
+
+    }
+    & > .window {
+      max-width: 414px;
+      & > .header {
+        height: 48px;
+        & > :matches(.button, .title) {
+          font-size: 13px;
+        }
+        & > .button {
+
+        }
+        & > .title {
+        }
+      }
+      & > .content {
+        row-gap: 20px;
+        padding: 30px var(--common--main-horizontal-padding) 24px;
+        & > .form {
+          & > .field {
+
+          }
+          & > .text-button {
+            font-size: 12px;
+          }
+          & > .note {
+            font-size: 12px;
+          }
+          & > .error-message {
+
+          }
+          & > .button {
+
+          }
+        }
+        & > .close-button {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  @media (--l-min) {
+    & > .background {
+
+    }
+    & > .window {
+      max-width: 510px;
+      & > .header {
+        height: 64px;
+        & > :matches(.button, .title) {
+          font-size: 14px;
+        }
+        & > .button {
+
+        }
+        & > .title {
+        }
+      }
+      & > .content {
+        row-gap: 24px;
+        padding: 36px 56px 28px;
+        & > .form {
+          & > .field {
+
+          }
+          & > .text-button {
+            font-size: 10px;
+          }
+          & > .note {
+            font-size: 10px;
+          }
+          & > .error-message {
+
+          }
+          & > .button {
+
+          }
+        }
+        & > .close-button {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

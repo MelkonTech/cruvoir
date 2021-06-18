@@ -1,0 +1,27 @@
+.loading:global {
+  --loading--icon-size: 48px;
+  --loading--background-color: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: grid;
+  place-content: center;
+  background-color: var(--loading--background-color);
+  transition-property: opacity;
+  transition-duration: .2s;
+  transition-timing-function: ease-in;
+  &:not(.is-shown) {
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.is-shown {
+    opacity: 1;
+    pointer-events: inherit;
+  }
+  & > .icon {
+    --icon--size: var(--loading--icon-size);
+    --icon--color: #000;
+  }
+}

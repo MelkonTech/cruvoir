@@ -1,0 +1,16 @@
+/* stylelint-disable at-rule-whitelist */
+/* "m" - mobile */
+@custom-media --m-max (width <= 425px);
+@custom-media --m (--m-max);
+/* "p" - phablet / big mobile */
+@custom-media --p-min (width >= 426px);
+@custom-media --p-max (width <= 767px);
+@custom-media --p (--p-min) and (--p-max);
+/* "t" - tablet */
+@custom-media --t-min (width >= 768px);
+@custom-media --t-max (width <= 1023px);
+@custom-media --t (--t-min) and (--t-max);
+/* "l" - laptops and bigger */
+@custom-media --l-min (width >= 1024px);
+@custom-media --l (--l-min);
+/* stylelint-enable at-rule-whitelist */

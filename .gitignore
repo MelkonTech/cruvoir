@@ -1,0 +1,37 @@
+.DS_Store
+node_modules
+
+# Next.js
+frontend/.next
+next-env.d.ts
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# editors
+/.vscode
+/.idea
+/.history
+/backend/.idea
+
+# next.js
+/.next/

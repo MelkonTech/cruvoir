@@ -1,0 +1,44 @@
+#import "../../../common/graphql/_product.graphql"
+#import "../../../common/graphql/_imageThumb.graphql"
+
+query Products(
+  $after: String,
+  $before: String,
+  $first: Int,
+  $last: Int,
+  $query: String,
+  $reverse: Boolean,
+  $sortKey: ProductSortKeys
+) {
+  products(
+    after: $after,
+    before: $before,
+    first: $first,
+    last: $last,
+    query: $query,
+    reverse: $reverse,
+    sortKey: $sortKey
+  ) {
+    edges {
+      cursor
+
+      node {
+        ..._product
+
+        images(first: 2) {
+          edges {
+            node {
+              ..._imageThumb
+              altText
+            }
+          }
+        }
+      }
+    }
+
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

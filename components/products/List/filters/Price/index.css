@@ -1,0 +1,26 @@
+.price:global {
+  & > .head {
+
+  }
+  & > .list {
+    & > .field-wrapper {
+      display: block;
+      padding-top: 4px;
+      padding-bottom: 34px;
+      & > .field {
+        display: grid;
+        column-gap: 8px;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        align-items: center;
+        & > .field {
+
+        }
+        & > .divider {
+          width: 8px;
+          height: 1px;
+          background-color: #777;
+        }
+      }
+    }
+  }
+}

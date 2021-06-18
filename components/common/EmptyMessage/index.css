@@ -1,0 +1,10 @@
+.emptyMessage:global {
+  display: grid;
+  place-content: center;
+  line-height: 16px;
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a1a1a1;
+}

@@ -1,0 +1,12 @@
+mutation checkoutDiscountCodeApplyV2($discountCode: String!, $checkoutId: ID!) {
+  checkoutDiscountCodeApplyV2(discountCode: $discountCode, checkoutId: $checkoutId) {
+    checkout {
+      id
+    }
+    checkoutUserErrors {
+      code
+      field
+      message
+    }
+  }
+}

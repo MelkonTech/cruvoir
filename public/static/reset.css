@@ -1,0 +1,111 @@
+:focus {
+  /* stylelint-disable-next-line property-whitelist */
+  outline: unset;
+}
+/* stylelint-disable-next-line selector-max-attribute */
+:matches(a, abbr, address, b, blockquote, button, cite, div, dd, dl, dt, form, h1, h2, h3, h4, header, hr, img, input, li, nav, ol, option, p, pre, progress, section, select, small, span, strong, table, tbody, td, tfoot, th, thead, textarea, time, ul) {
+  /* EDGE */
+  @supports not (all: unset) {
+    resize: unset;
+    vertical-align: unset;
+    display: unset;
+    width: unset;
+    min-width: unset;
+    max-width: unset;
+    height: unset;
+    min-height: unset;
+    max-height: unset;
+    border: unset;
+    margin: unset;
+    padding: unset;
+    line-height: unset;
+    font-size: unset;
+    /* stylelint-disable-next-line font-weight-notation */
+    font-weight: unset;
+    font-style: unset;
+    font-family: unset;
+    text-align: unset;
+    text-decoration: unset;
+    color: unset;
+    background-color: unset;
+    border-radius: unset;
+    cursor: unset;
+  }
+  @supports (all: unset) {
+    /* Temporarily disabling for Safari. */
+    /* all: unset; */
+    /* The code below will need to be removed after fixing problems in Safari. */
+    resize: unset;
+    vertical-align: unset;
+    display: unset;
+    width: unset;
+    min-width: unset;
+    max-width: unset;
+    height: unset;
+    min-height: unset;
+    max-height: unset;
+    border: unset;
+    margin: unset;
+    padding: unset;
+    line-height: unset;
+    font-size: unset;
+    /* stylelint-disable-next-line font-weight-notation */
+    font-weight: unset;
+    font-style: unset;
+    font-family: unset;
+    text-align: unset;
+    text-decoration: unset;
+    color: unset;
+    background-color: unset;
+    border-radius: unset;
+    cursor: unset;
+  }
+  /* stylelint-disable-next-line order/order */
+  appearance: none;
+  box-sizing: border-box;
+}
+/* Firefox */
+/* stylelint-disable selector-max-type */
+:matches(button, input, textarea) {
+  /* stylelint-disable-next-line selector-pseudo-element-whitelist */
+  &::-moz-focus-inner {
+    all: unset;
+  }
+}
+:matches(input, textarea) {
+  &::placeholder {
+    color: unset;
+  }
+}
+input {
+  /* EDGE */
+  /* stylelint-disable-next-line selector-pseudo-element-whitelist */
+  &::-ms-clear {
+    display: none;
+  }
+  /* stylelint-disable-next-line selector-pseudo-element-whitelist */
+  &:matches(::-webkit-search-cancel-button, ::-webkit-inner-spin-button, ::-webkit-outer-spin-button) {
+    display: none;
+  }
+}
+progress {
+  /* Chrome / Safari */
+  /* stylelint-disable-next-line selector-pseudo-element-whitelist */
+  &:matches(::-webkit-progress-inner-element, ::-webkit-progress-bar, ::-webkit-progress-value) {
+    all: unset;
+    box-sizing: border-box;
+  }
+  /* Firefox */
+  /* stylelint-disable-next-line selector-pseudo-element-whitelist */
+  &::-moz-progress-bar {
+    all: unset;
+    box-sizing: border-box;
+  }
+  /* EDGE */
+  /* stylelint-disable-next-line selector-pseudo-element-whitelist */
+  &::-ms-fill {
+    border: unset;
+    background-color: unset;
+  }
+}
+/* stylelint-enable selector-max-type */

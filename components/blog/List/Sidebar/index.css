@@ -1,0 +1,96 @@
+.sidebar:global {
+  display: block;
+  & > .active-layer {
+
+  }
+  & > .wrapper {
+    & > .button-section {
+
+    }
+    & > .scroll {
+      display: grid;
+      row-gap: 36px;
+      align-content: start;
+    }
+  }
+  @media (--t-max) {
+    transform: translateX(var(--translate-x));
+    opacity: var(--opacity);
+    transition-property: transform, opacity;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    pointer-events: var(--pointer-events);
+    &:not(.is-shown) {
+      --translate-x: -24px;
+      --opacity: 0;
+      --pointer-events: none;
+    }
+    &.is-shown {
+      --translate-x: 0;
+      --opacity: 1;
+      --pointer-events: inherit;
+    }
+    & > .active-layer {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 100vw;
+      background-color: hsl(0 0% 0% / 45%);
+      cursor: pointer;
+    }
+    & > .wrapper {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      row-gap: 16px;
+      grid-template-rows: 60px 1fr;
+      height: 100%;
+      background-color: #fff;
+      & > :matches(.button-section, .scroll) {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      & > .button-section {
+        display: grid;
+        justify-content: end;
+        align-content: center;
+        box-shadow: 0 -1px #e5e5e5 inset;
+        & > .button {
+          --icon--size: 16px;
+          --icon--color: #777;
+          margin: -4px;
+          padding: 4px;
+          cursor: pointer;
+        }
+      }
+      & > .scroll {
+        overflow: hidden auto;
+        & > .section {
+          &:nth-last-of-type(1) {
+            margin-bottom: 16px;
+          }
+        }
+        & > .divider {
+
+        }
+      }
+    }
+  }
+  @media (--l-min) {
+    display: contents;
+    & > .active-layer {
+      display: none;
+    }
+    & > .wrapper {
+      display: contents;
+      & > .button-section {
+        display: none;
+      }
+      & > .scroll {
+
+      }
+    }
+  }
+}

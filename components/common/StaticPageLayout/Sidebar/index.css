@@ -1,0 +1,23 @@
+.sidebar:global {
+  display: block;
+  & > .link {
+    display: block;
+    padding: 10px 12px;
+    line-height: 16px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    background-color: var(--background-color);
+    transition-property: background-color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+    &:not(.is-selected) {
+      --background-color: #fff;
+    }
+    &.is-selected {
+      --background-color: #f8f8f8;
+    }
+  }
+}

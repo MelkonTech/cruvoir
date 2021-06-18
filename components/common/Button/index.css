@@ -1,0 +1,181 @@
+.button:global {
+  position: relative;
+  z-index: 0;
+  display: block;
+  width: var(--button--width);
+  height: 38px;
+  border-radius: 2px;
+  cursor: var(--cursor);
+  contain: strict;
+  &:not(.is-disabled, .is-loading) {
+    --cursor: pointer;
+  }
+  &:matches(.is-disabled, .is-loading) {
+    --cursor: not-allowed;
+  }
+  &:not(.is-loading) {
+    --loader-visibility: hidden;
+    --loader-opacity: 0;
+  }
+  &.is-loading {
+    --loader-visibility: inherit;
+    --loader-opacity: 1;
+  }
+  &.appearance--fill {
+    --background-box-shadow-color: transparent;
+    --foreground-box-shadow-color: transparent;
+    &:not(.is-disabled) {
+      --background-color: #fff;
+      --background-background-color: #313131;
+      --foreground-color: #fff;
+      --foreground-background-color: #1c1c1c;
+      --loader-color: transparent;
+      &:not(:hover) {
+        --foreground-clip-path-y: 100%;
+      }
+      &:hover {
+        --foreground-clip-path-y: 0;
+      }
+    }
+    &.is-disabled {
+      --background-background-color: #818181;
+      --foreground-clip-path-y: 100%;
+      &:not(.is-loading) {
+        --background-color: #fff;
+        --loader-color: transparent;
+      }
+      &.is-loading {
+        --background-color: transparent;
+        --loader-color: #fff;
+      }
+    }
+  }
+  &.appearance--outline {
+    --background-background-color: #fff;
+    --foreground-box-shadow-color: transparent;
+    &:not(.is-disabled) {
+      --loader-color: transparent;
+      --background-color: #313131;
+      --background-box-shadow-color: #313131;
+      --foreground-color: #fff;
+      --foreground-background-color: #1c1c1c;
+      &:not(:hover) {
+        --foreground-clip-path-y: 100%;
+      }
+      &:hover {
+        --foreground-clip-path-y: 0;
+      }
+    }
+    &.is-disabled {
+      --background-box-shadow-color: #989898;
+      --foreground-clip-path-y: 100%;
+      &:not(.is-loading) {
+        --background-color: #989898;
+        --loader-color: transparent;
+      }
+      &.is-loading {
+        --background-color: transparent;
+        --loader-color: #989898;
+      }
+    }
+  }
+  &.width--narrow {
+    --button--width: 48px;
+  }
+  &.width--regular {
+    --button--width: 168px;
+  }
+  &.width--flex {
+    --button--width: 100%;
+  }
+  &.has-icon {
+    & > :matches(.background, .foreground) {
+      &:not(:empty) {
+        &::before {
+          margin-right: 8px;
+        }
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 14px;
+        background-color: currentColor;
+        mask-image: var(--icon);
+        mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        transition-property: background-color;
+        transition-duration: .2s;
+        transition-timing-function: ease-in;
+      }
+    }
+    & > .background {
+
+    }
+    & > .foreground {
+
+    }
+  }
+  &::after {
+    content: "";
+    visibility: var(--loader-visibility);
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--loader-color);
+    mask-image: var(--icon--image-loading);
+    mask-size: 20px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    border-radius: inherit;
+    opacity: var(--loader-opacity);
+    transition-property: visibility, opacity;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    contain: strict;
+  }
+  & > :matches(.background, .foreground) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    /* EDGE */
+    place-items: center;
+    place-content: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    line-height: 14px;
+    font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: inherit;
+    pointer-events: none;
+    contain: strict;
+  }
+  & > .background {
+    z-index: 1;
+    color: var(--background-color);
+    background-color: var(--background-background-color);
+    box-shadow: 0 0 0 1px var(--background-box-shadow-color) inset;
+    transition-property: color, background-color, box-shadow;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+  }
+  & > .foreground {
+    z-index: 2;
+    color: var(--foreground-color);
+    background-color: var(--foreground-background-color);
+    box-shadow: 0 0 0 1px var(--foreground-box-shadow-color) inset;
+    clip-path: inset(var(--foreground-clip-path-y) 0 0 0);
+    transition-property: color, background-color, box-shadow, clip-path;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+  }
+}

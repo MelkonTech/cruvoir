@@ -1,0 +1,142 @@
+.gallery:global {
+  position: relative;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  place-items: center;
+  place-content: center;
+  & > .list {
+    /* EDGE */
+    /* stylelint-disable-next-line property-whitelist */
+    -ms-overflow-style: none;
+    /* Safari */
+    /* stylelint-disable-next-line property-whitelist */
+    -webkit-overflow-scrolling: touch;
+    grid-area: 1 / 1 / -1 / -1;
+    overflow: auto hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    z-index: 1;
+    display: grid;
+    column-gap: 8px;
+    grid-template-rows: 100%;
+    grid-auto-flow: column;
+    align-items: start;
+    max-width: 100%;
+    height: 100%;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    & > .slide {
+      scroll-snap-align: center;
+      height: min(100vh - 60px, 400px);
+      cursor: pointer;
+      contain: layout paint;
+      & > .image {
+        height: 100%;
+      }
+    }
+  }
+  & > .navigation {
+
+  }
+  & > .empty-message {
+    display: grid;
+    place-content: center;
+    height: 100%;
+    line-height: 18px;
+    font-size: 14px;
+    text-align: center;
+    color: #7f7f7f;
+  }
+  @media (--t-max) {
+    & > .list {
+
+    }
+    & > .navigation {
+      display: none;
+    }
+  }
+  @media (--l-min) {
+    --slider--navigation-button-size: 24px;
+    --slider--navigation-offset: 18px;
+    --slider--navigation-button-icon-size: 8px;
+    --slider--navigation-button-icon-color: #000;
+    --slider--navigation-button-shadow-icon-color: #fff;
+    --slider--navigation-button-icon-image: var(--icon--image-slider-next);
+    padding-top: calc(var(--slider--navigation-button-size) + var(--slider--navigation-offset));
+    & > .list {
+
+    }
+    & > .navigation {
+      grid-area: 1 / 1 / -1 / -1;
+      justify-self: end;
+      align-self: start;
+      display: grid;
+      column-gap: 6px;
+      grid-template-columns: repeat(2, var(--slider--navigation-button-size));
+      margin-top: calc((var(--slider--navigation-button-size) + var(--slider--navigation-offset)) * -1);
+      & > .button {
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: var(--slider--navigation-button-size);
+        height: var(--slider--navigation-button-size);
+        background-color: #fff;
+        border-radius: 1px;
+        box-shadow: 0 0 0 1px #1c1c1c inset;
+        opacity: var(--opacity);
+        transition-property: opacity;
+        transition-duration: .2s;
+        transition-timing-function: ease-in;
+        cursor: pointer;
+        pointer-events: var(--pointer-events);
+        &:not(.is-shown) {
+          --opacity: 0;
+          --pointer-events: none;
+        }
+        &.is-shown {
+          &:not(.is-disabled) {
+            --opacity: 1;
+            --pointer-events: inherit;
+          }
+          &.is-disabled {
+            --opacity: .1;
+            --pointer-events: none;
+          }
+        }
+        &.type--prev {
+          transform: scaleX(-1);
+        }
+        &.type--next {
+          transform: scaleX(1);
+        }
+        &:matches(::before, ::after) {
+          content: "";
+          position: absolute;
+          left: calc((100% - var(--slider--navigation-button-icon-size)) / 2);
+          top: calc((100% - var(--slider--navigation-button-icon-size)) / 2);
+          width: var(--slider--navigation-button-icon-size);
+          height: var(--slider--navigation-button-icon-size);
+          mask-image: var(--slider--navigation-button-icon-image);
+          mask-size: contain;
+          mask-position: center;
+          mask-repeat: no-repeat;
+          transition-property: opacity;
+          transition-duration: .2s;
+          transition-timing-function: ease-in;
+          pointer-events: none;
+        }
+        &::before {
+          margin-left: -1px;
+          background-color: var(--slider--navigation-button-shadow-icon-color);
+        }
+        &::after {
+          background-color: var(--slider--navigation-button-icon-color);
+        }
+      }
+    }
+  }
+}

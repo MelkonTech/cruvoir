@@ -1,0 +1,88 @@
+{
+  "products": {
+    "__typename": "ProductConnection",
+
+    "edges": [
+      {
+        "__typename": "ProductEdge",
+        "cursor": "1",
+
+        "node": {
+          "__typename"     : "Product",
+          "descriptionHtml": "",
+          "handle"         : "amazing-product",
+          "id"             : "1",
+
+          "options": [{
+            "__typename": "ProductOption",
+            "id"        : "1",
+            "name"      : "Size",
+            "values"    : ["XS"]
+          }],
+
+          "productType"    : "",
+          "tags"           : ["men"],
+          "title"          : "Amazing product",
+          "vendor"         : "Cool vendor",
+
+          "images": {
+            "__typename": "ImageConnection",
+
+            "edges": [
+              {
+                "__typename": "ImageEdge",
+
+                "node": {
+                  "__typename": "Image",
+                  "altText": "",
+                  "transformedSrc": ""
+                }
+              }
+            ]
+          },
+
+          "variants": {
+            "__typename"  : "ProductVariantConnection",
+
+            "edges": [
+              {
+                "__typename"  : "ProductVariantEdge",
+                "node": {
+                  "__typename"  : "ProductVariant",
+                  "id": "1",
+                  "availableForSale": true,
+
+                  "compareAtPriceV2": {
+                    "__typename"  : "MoneyV2",
+                    "amount"      : "590.0",
+                    "currencyCode": "USD"
+                  },
+
+                  "selectedOptions": [
+                    {
+                      "__typename"  : "SelectedOption",
+                      "name": "Size",
+                      "value": "XS"
+                    }
+                  ],
+
+                  "priceV2": {
+                    "__typename"  : "MoneyV2",
+                    "amount": "170.0",
+                    "currencyCode": "USD"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+
+    "pageInfo": {
+      "__typename": "PageInfo",
+      "hasNextPage": false,
+      "hasPreviousPage": false
+    }
+  }
+}

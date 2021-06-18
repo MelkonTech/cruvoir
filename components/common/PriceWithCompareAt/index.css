@@ -1,0 +1,36 @@
+.priceWithCompareAt:global {
+  --price-with-compare-at--line-height: 16px;
+  --price-with-compare-at--font-size: 10px;
+  display: grid;
+  column-gap: 8px;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  line-height: var(--price-with-compare-at--line-height);
+  font-size: var(--price-with-compare-at--font-size);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  & > .price {
+    &:not(:only-child) {
+      color: #1c1c1c;
+    }
+    &:only-child {
+      color: #1c1c1c;
+    }
+  }
+  & > .compare-at-price {
+    color: #777;
+    &:not(:only-child) {
+      text-decoration: line-through;
+    }
+  }
+  & > .percent {
+    height: calc(var(--price-with-compare-at--line-height) - 2px * 2);
+    padding-left: 2px;
+    padding-right: 2px;
+    line-height: calc(var(--price-with-compare-at--line-height) - 2px * 2);
+    color: #1c1c1c;
+    background-color: #ffedc0;
+    border-radius: 1px;
+  }
+}

@@ -1,0 +1,29 @@
+.section:global {
+  display: grid;
+  row-gap: 16px;
+  & > .header {
+
+  }
+  & > .list {
+    display: grid;
+    row-gap: 12px;
+  }
+  @media (--t-max) {
+    & > .header {
+
+    }
+    & > .list {
+      margin-left: -16px;
+      margin-right: -16px;
+    }
+  }
+  @media (--l-min) {
+    & > .header {
+
+    }
+    & > .list {
+      overflow: hidden auto;
+      max-height: 274px;
+    }
+  }
+}

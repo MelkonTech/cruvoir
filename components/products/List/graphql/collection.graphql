@@ -1,0 +1,45 @@
+#import "../../../common/graphql/_product.graphql"
+#import "../../../common/graphql/_imageThumb.graphql"
+
+query Collection(
+  $after: String,
+  $handle: String!
+) {
+  collectionByHandle(handle: $handle) {
+    id
+    title
+
+    products(
+      first: 250,
+      after: $after
+    ) {
+      edges {
+        cursor
+
+        node {
+          ..._product
+
+          images(first: 2) {
+            edges {
+              node {
+                ..._imageThumb
+                altText
+              }
+            }
+          }
+
+          priceRange {
+            minVariantPrice {
+              amount
+              currencyCode
+            }
+          }
+        }
+      }
+
+      pageInfo {
+        hasNextPage
+      }
+    }
+  }
+}

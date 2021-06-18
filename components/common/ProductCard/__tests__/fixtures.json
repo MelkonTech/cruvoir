@@ -1,0 +1,117 @@
+{
+  "__typename": "Product",
+  "descriptionHtml": "",
+  "handle": "amazing-product",
+  "id": "1",
+
+  "options": [
+    {
+      "__typename": "ProductOption",
+      "id": "1",
+      "name": "Size",
+      "values": ["XS", "S"]
+    },
+
+    {
+      "__typename": "ProductOption",
+      "id": "2",
+      "name": "Color",
+      "values": ["White"]
+    }
+  ],
+
+  "productType": "",
+  "tags": ["men"],
+  "title": "Amazing product",
+  "vendor": "Cool vendor",
+
+  "images": {
+    "__typename": "ImageConnection",
+
+    "edges": [
+      {
+        "__typename": "ImageEdge",
+
+        "node": {
+          "__typename": "Image",
+          "altText": "a",
+          "transformedSrc": "",
+          "id": "1",
+          "originalSrc": "string"
+        }
+      }
+    ]
+  },
+
+  "variants": {
+    "__typename": "ProductVariantConnection",
+
+    "edges": [
+      {
+        "__typename": "ProductVariantEdge",
+
+        "node": {
+          "__typename": "ProductVariant",
+          "id": "1",
+          "availableForSale": true,
+
+          "compareAtPriceV2": {
+            "__typename": "MoneyV2",
+            "amount": "590.0",
+            "currencyCode": "USD"
+          },
+
+          "selectedOptions": [
+            {
+              "__typename": "SelectedOption",
+              "name": "Color",
+              "value": "White"
+            },
+
+            {
+              "__typename": "SelectedOption",
+              "name": "Size",
+              "value": "XS"
+            }
+          ],
+
+          "priceV2": {
+            "__typename": "MoneyV2",
+            "amount": "170.0",
+            "currencyCode": "USD"
+          }
+        }
+      },
+
+      {
+        "__typename": "ProductVariantEdge",
+
+        "node": {
+          "__typename": "ProductVariant",
+          "id": "2",
+          "availableForSale": false,
+
+          "compareAtPriceV2": {
+            "__typename": "MoneyV2",
+            "amount": "123.0",
+            "currencyCode": "USD"
+          },
+
+          "selectedOptions": [
+            {
+              "__typename": "SelectedOption",
+              "name": "Size",
+              "value": "S"
+            }
+          ],
+
+          "priceV2": {
+            "__typename": "MoneyV2",
+            "amount": "70.0",
+            "currencyCode": "USD"
+          }
+        }
+      }
+    ]
+  }
+}

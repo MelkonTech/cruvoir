@@ -1,0 +1,88 @@
+.autocomplete:global {
+  position: relative;
+  display: block;
+  /* stylelint-disable selector-max-type */
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+    height: 34px;
+    background-color: var(--field--input-color);
+    mask-image: var(--icon--image-dropdown-arrow);
+    mask-size: 8px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    pointer-events: none;
+  }
+  & > .autocomplete__control {
+    position: static;
+    height: 34px;
+    min-height: 34px;
+    border: none;
+    background-color: var(--field--input-background-color);
+    border-radius: 0;
+    box-shadow: 0 0 0 1px var(--field--input-border-color) inset;
+    transition-property: background-color, box-shadow;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+    & > .autocomplete__value-container {
+      position: relative;
+      height: inherit;
+      padding-left: 12px;
+      padding-right: 32px;
+      line-height: 20px;
+      font-size: 10px;
+      color: var(--field--input-color);
+      & > :matches(.autocomplete__single-value, .autocomplete__placeholder) {
+        margin-left: 0;
+        margin-right: 0;
+        line-height: 20px;
+      }
+      & > .autocomplete__single-value {
+        left: 16px;
+        right: 44px;
+      }
+      & > .autocomplete__placeholder {
+        color: var(--field--placehoder-color);
+      }
+      & > div {
+        flex-grow: 1;
+        display: block;
+        min-width: 100px;
+        margin-left: 0;
+        margin-right: 0;
+        & > .autocomplete__input {
+          display: block !important;
+          & > input {
+            width: 100% !important;
+          }
+          & > span {
+            display: block;
+          }
+        }
+      }
+    }
+    & > .autocomplete__indicators {
+      display: none;
+    }
+  }
+  & > .autocomplete__menu {
+    display: block;
+    & > .autocomplete__menu-list {
+      display: block;
+      & > .autocomplete__option {
+        min-height: 34px;
+        padding: 0 12px;
+        line-height: 34px;
+        font-size: 10px;
+      }
+      & > .autocomplete__menu-notice {
+        display: block;
+      }
+    }
+  }
+  /* stylelint-enable selector-max-type */
+}

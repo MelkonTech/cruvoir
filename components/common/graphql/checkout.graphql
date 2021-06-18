@@ -1,0 +1,122 @@
+#import "../../common/graphql/_imageThumb.graphql"
+
+query checkout($id: ID!) {
+  node(id: $id) {
+    id
+
+    ... on Checkout {
+      totalTaxV2 {
+        amount
+        currencyCode
+      }
+
+      discountApplications(first: 100) {
+        edges {
+          node {
+            ... on DiscountCodeApplication {
+              code
+            }
+
+            value {
+              ...on MoneyV2 {
+                amount
+              }
+
+              ...on PricingPercentageValue {
+                percentage
+              }
+            }
+          }
+        }
+      }
+
+      subtotalPriceV2 {
+        amount
+        currencyCode
+      }
+
+      paymentDueV2 {
+        amount
+        currencyCode
+      }
+
+      requiresShipping
+      ready
+
+      shippingAddress {
+        id
+        address1
+        address2
+        city
+        country
+        firstName
+        lastName
+        zip
+        phone
+        province
+        countryCodeV2
+        provinceCode
+      }
+
+      shippingLine {
+        handle
+        title
+
+        priceV2 {
+          amount
+        }
+      }
+
+      totalTaxV2 {
+        amount
+        currencyCode
+      }
+
+      lineItems(first: 100) {
+        edges {
+          node {
+            id
+            title
+            quantity
+
+            variant {
+              id
+
+              product {
+                id
+                title
+                vendor
+                handle
+                tags
+
+                images(first: 2) {
+                  edges {
+                    node {
+                      ..._imageThumb
+                      altText
+                    }
+                  }
+                }
+              }
+
+              selectedOptions {
+                name
+                value
+              }
+
+              compareAtPriceV2 {
+                amount
+                currencyCode
+              }
+
+              priceV2 {
+                amount
+                currencyCode
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

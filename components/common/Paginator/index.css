@@ -1,0 +1,23 @@
+.paginator:global {
+  display: grid;
+  column-gap: 40px;
+  grid-auto-flow: column;
+  align-items: center;
+  & > .link {
+    --icon--size: 28px;
+    --icon--color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    &:not(.is-disabled) {
+      --color: #323232;
+    }
+    &.is-disabled {
+      --color: #dadada;
+      pointer-events: none;
+    }
+  }
+}

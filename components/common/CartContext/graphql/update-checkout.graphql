@@ -1,0 +1,13 @@
+mutation update($lineItems: [CheckoutLineItemInput!]!, $checkoutId: ID!) {
+  checkoutLineItemsReplace(lineItems: $lineItems, checkoutId: $checkoutId) {
+    checkout {
+      id
+    }
+
+    userErrors {
+      code
+      field
+      message
+    }
+  }
+}

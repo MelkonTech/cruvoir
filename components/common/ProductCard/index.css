@@ -1,0 +1,183 @@
+.card:global {
+  position: relative;
+  display: block;
+  padding-top: 36px;
+  border-radius: 2px;
+  &:not(:hover) {
+    --image-2-opacity: 0;
+  }
+  &:hover {
+    --image-2-opacity: 1;
+  }
+  & > .picture {
+    position: relative;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 150%;
+    }
+    & > :matches(.image, .empty-message) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+    & > .image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: #fff;
+      &:nth-of-type(1) {
+
+      }
+      &:nth-of-type(2) {
+        @media (pointer: fine) {
+          opacity: var(--image-2-opacity);
+          transition-property: opacity;
+          transition-duration: .2s;
+          transition-timing-function: ease-in;
+        }
+        @media (pointer: coarse) {
+          display: none;
+        }
+      }
+    }
+    & > .empty-message {
+      margin: -36px -20px -20px;
+      background-color: #f8f8f8;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+    }
+  }
+  & > .section {
+    display: grid;
+    row-gap: 3px;
+    justify-items: start;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    &::before {
+      content: "";
+      justify-self: stretch;
+      height: 1px;
+      background-color: #e5e5e5;
+      opacity: var(--section-pseudo-before-opacity);
+      transition-property: opacity;
+      transition-duration: .2s;
+      transition-timing-function: ease-in;
+    }
+    & > :matches(.vendor, .title) {
+      overflow: hidden;
+      max-width: 100%;
+      line-height: 16px;
+      font-size: 10px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      letter-spacing: 1px;
+      color: var(--color);
+      transition-property: opacity;
+      transition-duration: .2s;
+      transition-timing-function: ease-in;
+    }
+    & > .vendor {
+      --color: #1c1c1c;
+      margin-top: 6px;
+      @media (pointer: fine) {
+        opacity: var(--section-title-opacity);
+      }
+    }
+    & > .title {
+      --color: #6e6e6e;
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+      @media (pointer: fine) {
+        opacity: var(--section-vendor-opacity);
+      }
+    }
+    & > .price {
+      /* Custom propertie "--line-height" as used in the component "Placeholder". */
+      --line-height: 16px;
+      /* Custom propertie "--font-size" as used in the component "Placeholder". */
+      --font-size: 10px;
+      /* Custom propertie "--color" as used in the component "Placeholder". */
+      --color: #1c1c1c;
+    }
+  }
+  & > .wish-button {
+    --size: 36px;
+    --icon--size: 14px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: var(--size);
+    height: var(--size);
+  }
+  & > .form {
+    @media (pointer: fine) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: var(--form-opacity);
+      transition-property: opacity;
+      transition-duration: .2s;
+      transition-timing-function: ease-in;
+    }
+    @media (pointer: coarse) {
+      display: none;
+    }
+  }
+  @media (pointer: fine) {
+    &:not(:hover) {
+      --pseudo-before-opacity: 0;
+      --section-pseudo-before-opacity: 1;
+      --section-title-opacity: 1;
+      --section-vendor-opacity: 1;
+      --form-opacity: 0;
+    }
+    &:hover {
+      --pseudo-before-opacity: 1;
+      --section-pseudo-before-opacity: 0;
+      --section-title-opacity: 0;
+      --section-vendor-opacity: 0;
+      --form-opacity: 1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: inherit;
+      box-shadow:
+        0 0 0 1px #e5e5e5 inset,
+        0 2px 6px hsl(0 0% 0% / 25%)
+      ;
+      opacity: var(--pseudo-before-opacity);
+      transition-property: opacity;
+      transition-duration: .2s;
+      transition-timing-function: ease-in;
+      pointer-events: none;
+    }
+  }
+  @media (--t-max) {
+
+  }
+  @media (--l-min) {
+    padding-bottom: 38px;
+  }
+}

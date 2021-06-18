@@ -1,0 +1,63 @@
+.tabs:global {
+  display: grid;
+  row-gap: 16px;
+  & > .buttons {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    box-shadow: 0 -1px #e5e5e5 inset;
+    & > .button {
+      font-size: 10px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      letter-spacing: 1px;
+      color: var(--color);
+      box-shadow: 0 -1px var(--box-shadow-color) inset;
+      transition-property: color, box-shadow;
+      transition-duration: .2s;
+      transition-timing-function: ease-in;
+      cursor: pointer;
+      &:not(.is-active) {
+        --color: #a1a1a1;
+        --box-shadow-color: #e5e5e5;
+      }
+      &.is-active {
+        --color: #1c1c1c;
+        --box-shadow-color: #1c1c1c;
+      }
+    }
+  }
+  & > .tab {
+    /* Safari */
+    min-width: 0;
+    &:not(.is-shown) {
+      display: none;
+    }
+    &.is-shown {
+
+    }
+  }
+  @media (--t-max) {
+    & > .buttons {
+      column-gap: 12px;
+      & > .button {
+        line-height: 28px;
+      }
+    }
+    & > .tab {
+
+    }
+  }
+  @media (--l-min) {
+    & > .buttons {
+      & > .button {
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 40px;
+      }
+    }
+    & > .tab {
+
+    }
+  }
+}

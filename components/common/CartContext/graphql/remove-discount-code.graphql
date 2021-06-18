@@ -1,0 +1,12 @@
+mutation checkoutDiscountCodeRemove($checkoutId: ID!) {
+  checkoutDiscountCodeRemove(checkoutId: $checkoutId) {
+    checkout {
+      id
+    }
+    checkoutUserErrors {
+      code
+      field
+      message
+    }
+  }
+}

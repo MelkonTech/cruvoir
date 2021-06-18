@@ -1,0 +1,21 @@
+.section:global {
+  display: grid;
+  & > .title {
+    line-height: 32px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1c1c1c;
+    box-shadow: 0 -1px #e5e5e5 inset;
+  }
+  & > .section {
+    /* Safari */
+    min-width: 0;
+  }
+  @media (--t-max) {
+    row-gap: 14px;
+  }
+  @media (--l-min) {
+    row-gap: 16px;
+  }
+}

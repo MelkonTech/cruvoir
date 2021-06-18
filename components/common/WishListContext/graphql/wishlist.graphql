@@ -1,0 +1,8 @@
+query WishList($customerId: String!) {
+  wishlist(where: {customer_id: {_eq: $customerId}}) {
+    __typename
+    customer_id
+    id
+    product_id
+  }
+}

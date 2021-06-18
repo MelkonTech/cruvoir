@@ -1,0 +1,17 @@
+.wishButton:global {
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  &:not(.is-activated) {
+    --icon-opaicty: 0;
+  }
+  &.is-activated {
+    --icon-opaicty: 1;
+  }
+  & > .icon {
+    grid-area: 1 / 1 / -1 / -1;
+    &:nth-of-type(2) {
+      opacity: var(--icon-opaicty);
+    }
+  }
+}

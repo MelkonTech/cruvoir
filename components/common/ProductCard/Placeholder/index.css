@@ -1,0 +1,35 @@
+.placeholder:global {
+  pointer-events: none;
+  & > .picture {
+    background-color: #a1a1a1;
+  }
+  & > .section {
+    & > :matches(.vendor, .title, .price) {
+      background-color: currentColor;
+    }
+    & > .vendor {
+
+    }
+    & > .title {
+
+    }
+    & > .price {
+      line-height: var(--line-height);
+      font-size: var(--font-size);
+      color: var(--color);
+    }
+  }
+  & > .wish-button {
+    display: grid;
+    place-content: center;
+    &::before {
+      content: "";
+      display: block;
+      width: var(--icon--size);
+      height: var(--icon--size);
+      background-color: var(--icon--color-wish-fill);
+      mask-image: var(--icon--image-wish);
+      filter: grayscale(100%);
+    }
+  }
+}

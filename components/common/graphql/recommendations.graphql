@@ -1,0 +1,18 @@
+#import "./_product.graphql"
+#import "./_imageThumb.graphql"
+
+
+query Recommendations($productId: ID!) {
+  productRecommendations(productId: $productId) {
+    ..._product
+
+    images(first: 2) {
+      edges {
+        node {
+          ..._imageThumb
+          altText
+        }
+      }
+    }
+  }
+}

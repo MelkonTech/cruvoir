@@ -1,0 +1,49 @@
+.staticPageLayout:global {
+  display: grid;
+  align-items: start;
+  align-content: start;
+  padding: var(--common--main-horizontal-padding);
+  & > .title {
+    line-height: 20px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    box-shadow: 0 -1px #e5e5e5 inset;
+  }
+  & > .sidebar {
+
+  }
+  & > .content {
+    display: block;
+  }
+  @media (--t-max) {
+    justify-self: center;
+    row-gap: 24px;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 640px;
+    & > .title {
+
+    }
+    & > .sidebar {
+
+    }
+    & > .content {
+
+    }
+  }
+  @media (--l-min) {
+    gap: 32px;
+    grid-template-columns: 220px 1fr;
+    & > .title {
+      grid-column: span 2;
+    }
+    & > .sidebar {
+
+    }
+    & > .content {
+      max-width: 700px;
+    }
+  }
+}

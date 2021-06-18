@@ -1,0 +1,72 @@
+.pageAnimation:global {
+  --before-translate-x: 100%;
+  --after-translate-x: -100%;
+  --before-opacity: 1;
+  --after-opacity: 1;
+  display: block;
+  min-height: 100vh;
+  &:matches(::before, ::after) {
+    content: "";
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    transition-property: transform;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+    will-change: transform, opacity;
+  }
+  &::before {
+    transform: translateX(var(--before-translate-x));
+    opacity: var(--before-opacity);
+  }
+  &::after {
+    transform: translateX(var(--after-translate-x));
+    opacity: var(--after-opacity);
+  }
+  &.state-enter {
+    --before-translate-x: 0;
+    --after-translate-x: 0;
+    --before-opacity: 1;
+    --after-opacity: 0;
+    opacity: .999999;
+  }
+  &.state-enter-active {
+    --before-translate-x: 100%;
+    --after-translate-x: -100%;
+    --before-opacity: 1;
+    --after-opacity: 0;
+    opacity: 1;
+    transition: opacity .4ms;
+  }
+  &.state-enter-done {
+    --before-translate-x: 100%;
+    --after-translate-x: -100%;
+    --before-opacity: 1;
+    --after-opacity: 0;
+  }
+  &.state-exit {
+    --before-translate-x: 100%;
+    --after-translate-x: -100%;
+    --before-opacity: 0;
+    --after-opacity: 1;
+    opacity: 1;
+  }
+  &.state-exit-active {
+    --before-translate-x: 0;
+    --after-translate-x: 0;
+    --before-opacity: 0;
+    --after-opacity: 1;
+    opacity: .999999;
+    transition: opacity .4ms;
+  }
+  &.state-exit-done {
+    --before-translate-x: 0;
+    --after-translate-x: 0;
+    --before-opacity: 0;
+    --after-opacity: 1;
+  }
+}

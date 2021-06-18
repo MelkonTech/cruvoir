@@ -1,0 +1,64 @@
+.general:global {
+  & > .title {
+
+  }
+  & > .sidebar {
+
+  }
+  & > .content {
+    display: grid;
+    & > .error-message {
+      display: grid;
+      & > .row {
+        text-align: center;
+        color: #bc1b1b;
+      }
+    }
+    & > .form {
+
+    }
+  }
+  @media (--t-max) {
+    & > .title {
+
+    }
+    & > .sidebar {
+
+    }
+    & > .content {
+      row-gap: 24px;
+      & > .error-message {
+        row-gap: 8px;
+        & > .row {
+          line-height: 14px;
+          font-size: 12px;
+        }
+      }
+      & > .form {
+
+      }
+    }
+  }
+  @media (--l-min) {
+    & > .title {
+
+    }
+    & > .sidebar {
+
+    }
+    & > .content {
+      row-gap: 40px;
+      max-width: 700px;
+      & > .error-message {
+        row-gap: 12px;
+        & > .row {
+          line-height: 16px;
+          font-size: 14px;
+        }
+      }
+      & > .form {
+
+      }
+    }
+  }
+}

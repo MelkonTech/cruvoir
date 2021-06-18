@@ -1,0 +1,1154 @@
+{
+  "page": 1,
+  "results_per_page": 20,
+  "results_size": 1,
+  "total_results_size": 1,
+  "total_pages": 1,
+  "next_page": null,
+  "prev_page": null,
+  "results": [
+    {
+      "id": "XseHxhAAACAAoOv6",
+      "uid": null,
+      "type": "mens_featured_menu",
+      "href": "https://cruvoir.cdn.prismic.io/api/v2/documents/search?ref=XsuSDhAAACEAsmQw&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XseHxhAAACAAoOv6%22%29+%5D%5D",
+      "tags": [],
+      "first_publication_date": "2020-05-22T08:05:35+0000",
+      "last_publication_date": "2020-05-25T08:54:16+0000",
+      "slugs": [
+        "11"
+      ],
+      "linked_documents": [],
+      "lang": "en-us",
+      "alternate_languages": [],
+      "data": {
+        "designers": [
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "11",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-11-by-boris-bidjan-saberi/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "Adidas",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-adidas/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "ANN DEMEULEMEESTER",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-ann-demeulemeester/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "AMI ALEXANDRE MATTUSSI",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-ami-alexandre-mattussi/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "BY WALID",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-by-walid/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "CASEY CASEY",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-casey-casey/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "COMME DES GARÇONS HOMME PLUS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-comme-des-gar%C3%A7ons-homme-plus/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "DAMIR DOMA",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-damir-doma/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "ÉTUDES",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-etudes/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "GCDS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-gcds/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "GEOFFREY B. SMALL",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-geoffrey-b-small/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "GUIDI",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-guidi/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "HED MAYNER",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-hed-mayner/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "HENDER SCHEME",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-hender-scheme/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "HERON PRESTON",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-heron-preston/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "INDIVIDUAL SENTIMENTS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-individual-sentiments/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "JAN-JAN VAN ESSCHE",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-jan-jan-van-essche/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "JEREMY SCOTT",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-jeremy-scott/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "KENZO",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-kenzo/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "KUBORAUM",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-kuboraum/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "LABEL UNDER CONSTRUCTION",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-label-under-construction/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "LOST & FOUND",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-lost-and-found-ria-dunn-mens/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "MACKINTOSH",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-mackintosh/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "MACKINTOSH 0002",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-mackintosh-0002/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "MACKINTOSH 0004",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-mackintosh-0004/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "MARNI",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-marni/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "MEO FUSCIUNI",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-meo-fusciuni/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "M_MORIA",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-m_moria-by-maurizio-altieri/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "MYKITA",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-mykita/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "NEIL BARRETT",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-neil-barrett/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "PARTS OF 4",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-parts-of-4/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "RAF SIMONS & EASTPAK",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-eastpak/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "RICK OWENS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-rick-owens/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "RICK OWENS DRKSHDW",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-rick-owens-drkshdw/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "STEPHAN SCHNEIDER",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-stephan-schneider/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "THE VIRIDI-ANNE",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-the-viridi-anne/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "VALENTINO",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-valentino/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "MÜNCHEN",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-werkstatt-munchen/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "Y-3",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-y-3/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "YANG LI",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-yang-li/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "YEEZY",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-yeezy/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "YOHJI YAMAMOTO",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/mens-yohji-yamamoto/category/all/subcategory/all"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "VIEW ALL",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/all/subcategory/all"
+            }
+          }
+        ],
+        "clothing": [
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "Coats",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/clothing/subcategory/coats"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "BLAZERS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/clothing/subcategory/blazers"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "JACKETS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/clothing/subcategory/jackets"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "JEANS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/clothing/subcategory/jeans"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "KNITWEAR",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/clothing/subcategory/knitwear"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "PANTS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/clothing/subcategory/pants"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "SHIRTS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/clothing/subcategory/shirts"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "SHORTS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/clothing/subcategory/shorts"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "SPORTSWEAR",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/clothing/subcategory/sportswear"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "SWEATSHIRTS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/clothing/subcategory/sweatshirts"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "SWIMWEAR",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/clothing/subcategory/swimwear"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "T-SHIRTS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/clothing/subcategory/t-shirts"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "VIEW ALL",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/clothing/subcategory/all"
+            }
+          }
+        ],
+        "shoes": [
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "BOOTS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/shoes/subcategory/boots"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "SANDALS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/shoes/subcategory/sandals"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "SNEAKERS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/shoes/subcategory/sneakers"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "SLIDES",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/shoes/subcategory/slides"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "VIEW ALL",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/shoes/subcategory/all"
+            }
+          }
+        ],
+        "bags": [
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "BACKPACKS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/bags/subcategory/backpacks"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "BELT BAGS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/bags/subcategory/belt%20bags"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "CROSS BODY BAGS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/bags/subcategory/cross%20body%20bags"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "SHOULDER BAGS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/bags/subcategory/shoulder%20bags"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "TOTE BAGS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/bags/subcategory/tote%20bags"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "VIEW ALL",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/bags/subcategory/bags"
+            }
+          },
+          {
+            "image": {
+              "dimensions": {
+                "width": 512,
+                "height": 512
+              },
+              "alt": "Proenza Schouler",
+              "copyright": null,
+              "url": "https://images.prismic.io/cruvoir/3e324841-3b77-4694-b556-331334eb8255_proenza-schouler-3aeaae210e746339df8f5d10d6d32788.jpg?auto=compress,format&rect=0,360,1440,1440&w=512&h=512"
+            },
+            "title": [
+              {
+                "type": "heading3",
+                "text": "PROENZA SCHOULER",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/proenza-schouler/category/bags/subcategory/all"
+            }
+          }
+        ],
+        "accessories": [
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "BELTS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/accessories/subcategory/belts"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "FRAGRANCE",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/accessories/subcategory/fragrance"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "GLOVES",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/accessories/subcategory/gloves"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "HATS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/accessories/subcategory/hats"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "JEWELRY",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/accessories/subcategory/jewelry"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "UNDERWEAR & SOCKS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/accessories/subcategory/underwear%20&%20socks"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "SUNGLASSES",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/accessories/subcategory/sunglasses"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "TECH",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/accessories/subcategory/tech"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "TIES",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/accessories/subcategory/ties"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "WALLETS & CARDHOLDERS",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/accessories/subcategory/wallets%20&%20purses"
+            }
+          },
+          {
+            "image": {},
+            "title": [
+              {
+                "type": "heading3",
+                "text": "VIEW ALL",
+                "spans": []
+              }
+            ],
+            "url": {
+              "link_type": "Web",
+              "url": "https://cruvoir.com/men/shop/collection/all/category/accessories/subcategory/all"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "version": "8991d98",
+  "license": "All Rights Reserved"
+}

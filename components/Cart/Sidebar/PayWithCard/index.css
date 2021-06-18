@@ -1,0 +1,76 @@
+.paywithcardPopup:global {
+  --width: 450px;
+  visibility: var(--visibility);
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  display: grid;
+  row-gap: 24px;
+  width: var(--width);
+  max-width: calc(100vw - var(--common--main-horizontal-padding) * 2);
+  padding: 28px var(--common--main-horizontal-padding) 20px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 4px 16px hsl(0 0% 0% / 20%);
+  transform: translate(-50%, var(--translate-y));
+  opacity: var(--opacity);
+  transition-property: visibility, transform, opacity;
+  transition-duration: .2s;
+  transition-timing-function: ease-in;
+  pointer-events: var(--pointer-events);
+  &:not(.is-shown) {
+    --visibility: hidden;
+    --translate-y: 50px;
+    --opacity: 0;
+    --pointer-events: inherit;
+  }
+  &.is-shown {
+    --visibility: inherit;
+    --translate-y: 0;
+    --opacity: 1;
+    --pointer-events: auto;
+  }
+  & > .section {
+    display: grid;
+    row-gap: 24px;
+    & > .title {
+      line-height: 16px;
+      font-size: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1c1c1c;
+    }
+    & > .form {
+
+    }
+  }
+  & > .note {
+    line-height: 18px;
+    font-size: 11px;
+    text-align: center;
+    letter-spacing: .5px;
+    color: #777;
+    & > .link {
+
+    }
+  }
+  & > .close-button {
+    font-size: 12px;
+    justify-self: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: var(--text-decoration);
+    color: #262626;
+    cursor: pointer;
+    &:not(:hover) {
+      --text-decoration: underline;
+    }
+    &:hover {
+      --text-decoration: none;
+    }
+  }
+}

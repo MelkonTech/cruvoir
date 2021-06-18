@@ -1,0 +1,60 @@
+.underline:global {
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+  &:not(:hover) {
+    --before-clip-path-width: 0%;
+  }
+  &:hover {
+    --before-clip-path-width: 50%;
+  }
+  &:not(.is-permanent) {
+    --before-transition-delay: 0;
+    --after-opacity: 0;
+  }
+  &.is-permanent {
+    --before-transition-delay: .2s;
+    &:not(:hover) {
+      --after-opacity: 1;
+    }
+    &:hover {
+      --after-opacity: 0;
+    }
+  }
+  &:matches(::before, ::after) {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    pointer-events: none;
+    contain: strict;
+  }
+  &::before {
+    clip-path:
+      polygon(
+        0 0,
+        var(--before-clip-path-width) 0,
+        var(--before-clip-path-width) 100%,
+        0 100%,
+        100% 100%,
+        calc(100% - var(--before-clip-path-width)) 100%,
+        calc(100% - var(--before-clip-path-width)) 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        0 0
+      )
+    ;
+    transition-property: clip-path;
+    transition-delay: var(--before-transition-delay);
+  }
+  &::after {
+    opacity: var(--after-opacity);
+    transition-property: opacity;
+  }
+}

@@ -1,0 +1,38 @@
+.addresses:global {
+  & > .title {
+
+  }
+  & > .sidebar {
+
+  }
+  & > .content {
+    display: grid;
+    row-gap: 16px;
+    max-width: 700px;
+    & > .button-wrapper {
+      justify-self: start;
+      & > .button {
+        line-height: 16px;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #1c1c1c;
+      }
+    }
+    & > .list {
+      overflow: hidden;
+      display: block;
+      & > .item {
+        &:nth-of-type(n+2) {
+          margin-top: -1px;
+        }
+      }
+      & > .empty-message {
+        min-height: 200px;
+      }
+    }
+    & > .paginator {
+      justify-self: end;
+    }
+  }
+}
