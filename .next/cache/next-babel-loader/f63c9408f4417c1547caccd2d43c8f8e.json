@@ -1,1 +1,0 @@
-{"ast":null,"code":"import * as R from 'ramda';\nexport const getGender = (router, isBlogDomain) => isBlogDomain ? 'women' : R.pathOr('women', ['query', 'gender'], router).replace('all', 'women');","map":null,"metadata":{},"sourceType":"module"}

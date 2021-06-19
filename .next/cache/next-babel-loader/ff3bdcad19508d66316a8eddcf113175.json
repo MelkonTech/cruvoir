@@ -1,1 +1,0 @@
-{"ast":null,"code":"export const urlToSitemapXMLItem = params => {\n  return `<url>\n    <loc>${decodeURI(params.url.replace(/&/g, '&amp;'))}</loc>\n    <changefreq>weekly</changefreq>\n    ${params.date ? `<lastmod>${new Date(params.date).toISOString()}</lastmod>` : ''}\n  </url>`;\n};","map":null,"metadata":{},"sourceType":"module"}

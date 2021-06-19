@@ -1,1 +1,0 @@
-{"ast":null,"code":"import * as R from 'ramda';\nexport const getHeroImagePath = R.compose(R.propOr('', 'url'), R.find(R.propEq('type', 'image')));","map":null,"metadata":{},"sourceType":"module"}

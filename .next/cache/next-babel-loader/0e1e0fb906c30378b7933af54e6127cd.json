@@ -1,1 +1,0 @@
-{"ast":null,"code":"import * as R from 'ramda'; // Append query params to a link which already has query params\n\nexport const appendURLQueryParams = (link, queryParamsString) => `${link.replace(/\\?.*/, '')}?${R.compose(R.join('&'), R.filter(Boolean), R.concat([queryParamsString]), R.tail, R.split('?'))(link)}`;","map":null,"metadata":{},"sourceType":"module"}

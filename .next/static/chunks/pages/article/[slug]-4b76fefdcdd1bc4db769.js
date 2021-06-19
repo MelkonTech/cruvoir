@@ -1,1 +1,0 @@
-_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[28],{"4ZYT":function(n,_,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/article/[slug]",function(){return t("qKtD")}])},qKtD:function(n,_,t){"use strict";t.r(_);var w=t("hIET");_.default=w.a}},[["4ZYT",0,1,3,2,4,5,6,7,9,12,13,16,8]]]);

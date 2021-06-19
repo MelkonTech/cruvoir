@@ -1,1 +1,0 @@
-{"ast":null,"code":"export const dashToCamel = string => string.replace(/[--]([a-z])/g, m => m[1].toUpperCase());","map":null,"metadata":{},"sourceType":"module"}

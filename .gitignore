@@ -3,6 +3,7 @@ node_modules
 package-lock.json
 
 # Next.js
+.next
 next-env.d.ts
 
 # Environments
@@ -22,14 +23,13 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+site
 
 # mypy
 .mypy_cache/
 
 # editors
-/.vscode
-/.idea
-/.history
-/backend/.idea
+.vscode
+.idea
+.history
 

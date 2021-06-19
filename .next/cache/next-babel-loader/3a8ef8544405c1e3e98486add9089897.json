@@ -1,1 +1,0 @@
-{"ast":null,"code":"export const camelToDash = string => string.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase();","map":null,"metadata":{},"sourceType":"module"}

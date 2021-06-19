@@ -1,1 +1,0 @@
-{"ast":null,"code":"import * as R from 'ramda';\nexport const capfirst = R.replace(/^./, R.toUpper);","map":null,"metadata":{},"sourceType":"module"}

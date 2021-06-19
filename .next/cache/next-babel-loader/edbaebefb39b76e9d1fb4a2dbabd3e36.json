@@ -1,1 +1,0 @@
-{"ast":null,"code":"export const isServer = () => true;","map":{"version":3,"sources":["D:/Work/web/direlli/frontend/components/common/helpers/is-server.tsx"],"names":["isServer"],"mappings":"AAAA,OAAO,MAAMA,QAAQ,GAAG,UAAjB","sourcesContent":["export const isServer = () => typeof window === 'undefined'\n"]},"metadata":{},"sourceType":"module"}

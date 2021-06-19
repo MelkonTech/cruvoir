@@ -1,1 +1,0 @@
-{"ast":null,"code":"import * as R from 'ramda';\nexport const objectToQueryString = object => R.map(value => `${value[0]}=${encodeURIComponent(value[1])}`, R.toPairs(object)).join('&');","map":null,"metadata":{},"sourceType":"module"}

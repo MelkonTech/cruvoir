@@ -1,1 +1,0 @@
-{"ast":null,"code":"export const nameToHandle = name => encodeURIComponent(name.toLowerCase().replace(/\\.$/, '').replace(/[\\s\\.]+/g, '-'));","map":null,"metadata":{},"sourceType":"module"}
