@@ -1,0 +1,1 @@
+{"ast":null,"code":"const NextI18Next = require('next-i18next').default;\n\nmodule.exports = new NextI18Next({\n  defaultLanguage: 'en',\n  fallbackLng: 'en',\n  localePath: 'public/static/locales',\n  otherLanguages: ['de', 'es', 'fr']\n});","map":null,"metadata":{},"sourceType":"script"}

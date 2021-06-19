@@ -1,0 +1,1 @@
+{"ast":null,"code":"import * as R from 'ramda';\nexport const getVariantOptionByName = (name, variant) => R.pathOr(null, ['value'], R.find(option => option.name === name, variant.selectedOptions));","map":null,"metadata":{},"sourceType":"module"}

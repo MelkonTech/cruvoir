@@ -1,0 +1,1 @@
+{"ast":null,"code":"import * as R from 'ramda';\nexport const shopifyEdgesToProducts = params => R.compose(R.pluck('node'), R.pathOr([], R.filter(Boolean, [params.queryName, 'products', 'edges'])))(params.data);","map":null,"metadata":{},"sourceType":"module"}

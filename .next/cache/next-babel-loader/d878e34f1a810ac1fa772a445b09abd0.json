@@ -1,0 +1,1 @@
+{"ast":null,"code":"import _extends from \"@babel/runtime/helpers/esm/extends\";\nimport React from \"react\";\nvar __jsx = React.createElement;\nimport { List } from \"../../../../../../components/products/List\";\nexport default (props => __jsx(List, _extends({}, props, {\n  isWishListRequested: true\n})));","map":null,"metadata":{},"sourceType":"module"}

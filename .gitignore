@@ -3,7 +3,6 @@ node_modules
 package-lock.json
 
 # Next.js
-frontend/.next
 next-env.d.ts
 
 # Environments
@@ -34,5 +33,3 @@ venv.bak/
 /.history
 /backend/.idea
 
-# next.js
-/.next/

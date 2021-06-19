@@ -1,0 +1,1 @@
+{"ast":null,"code":"import * as R from 'ramda';\nexport const getInitialVariantOptions = variants => R.reduce((obj, option) => R.assoc(option.name, option.value, obj), {}, R.pathOr([], ['node', 'selectedOptions'], variants[0]));","map":null,"metadata":{},"sourceType":"module"}

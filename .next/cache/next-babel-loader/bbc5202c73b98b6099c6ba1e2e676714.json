@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { ShoppingAtCruvoir } from \"../../components/ShoppingAtCruvoir\";\nexport default ShoppingAtCruvoir;","map":null,"metadata":{},"sourceType":"module"}

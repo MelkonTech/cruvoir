@@ -1,0 +1,23 @@
+.breadcrumbs__35rnL {
+  display: block;
+  line-height: 16px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px
+}
+.breadcrumbs__35rnL > .item {
+    display: inline;
+    transition-property: color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in
+  }
+.breadcrumbs__35rnL > .item:nth-last-of-type(n+2):not(:hover) {
+        color: #a1a1a1;
+      }
+.breadcrumbs__35rnL > .item:nth-last-of-type(n+2):hover {
+        color: #1c1c1c;
+      }
+.breadcrumbs__35rnL > .item:nth-last-of-type(1) {
+      color: #1c1c1c;
+    }
+

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import * as R from 'ramda'; // param1=value1&param2=value2\n\nexport const objectToFetchPostParams = object => R.join('&')(R.map(R.join('='), R.toPairs(object)));","map":null,"metadata":{},"sourceType":"module"}

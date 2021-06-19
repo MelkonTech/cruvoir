@@ -1,0 +1,1 @@
+{"ast":null,"code":"import * as R from 'ramda';\nexport const addTranslationsFromPO = params => params.i18n.addResources(params.lang, 'common', R.compose(R.fromPairs, R.map(term => [term.term, term.translation.content]))(params.translations));","map":null,"metadata":{},"sourceType":"module"}

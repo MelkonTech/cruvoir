@@ -75,7 +75,6 @@ class App extends NextApp<{apollo: ApolloClient<InMemoryCache>, portalManager: P
       )).results[0]
     } catch(error) {
       console.error('Error while fetching meta tags')
-      console.error(publicRuntimeConfig)
       console.error(error)
     }
 
@@ -115,25 +114,25 @@ class App extends NextApp<{apollo: ApolloClient<InMemoryCache>, portalManager: P
 
     let currencyRatesCookie = JSON.parse(getCookie({ctx: params.ctx, name: 'currencyRates'}));
     return {pageProps: {
-        ...pageProps,
-        asPath                    : params.ctx.asPath,
-        checkoutId                : getCookie({ctx: params.ctx, name: 'checkoutId'}),
-        currency                  : getCookie({ctx: params.ctx, name: 'currency'}) || 'USD',
-        currencyRates             : currencyRatesCookie && Object.keys(currencyRatesCookie).length === 0 ? null : currencyRatesCookie,
-        currencyRatesLastUpdatedAt: getCookie({ctx: params.ctx, name: 'currencyRatesLastUpdatedAt'}),
-        featuredMenuPrismicResponse,
-        host                      : isServer() ? params.ctx.req.headers.host : location.host,
+      ...pageProps,
+      asPath                    : params.ctx.asPath,
+      checkoutId                : getCookie({ctx: params.ctx, name: 'checkoutId'}),
+      currency                  : getCookie({ctx: params.ctx, name: 'currency'}) || 'USD',
+      currencyRates             : currencyRatesCookie && Object.keys(currencyRatesCookie).length === 0 ? null : currencyRatesCookie,
+      currencyRatesLastUpdatedAt: getCookie({ctx: params.ctx, name: 'currencyRatesLastUpdatedAt'}),
+      featuredMenuPrismicResponse,
+      host                      : isServer() ? params.ctx.req.headers.host : location.host,
 
-        isBlogDomain: (
-          isServer() ? params.ctx.req.headers.host : location.host
-        ) === publicRuntimeConfig.NEXT_PUBLIC_BLOG_URL.replace(/https?:\/\//, ''),
+      isBlogDomain: (
+        isServer() ? params.ctx.req.headers.host : location.host
+      ) === publicRuntimeConfig.NEXT_PUBLIC_BLOG_URL.replace(/https?:\/\//, ''),
 
-        metatags : pageMetatagsResponse?.data.metatags,
-        pageTitle: pageMetatagsResponse?.data.title,
-        pathname : params.ctx.pathname,
-        query    : params.ctx.query,
-        userToken: getCookie({ctx: params.ctx, name: 'token'}),
-      }}
+      metatags : pageMetatagsResponse?.data.metatags,
+      pageTitle: pageMetatagsResponse?.data.title,
+      pathname : params.ctx.pathname,
+      query    : params.ctx.query,
+      userToken: getCookie({ctx: params.ctx, name: 'token'}),
+    }}
   }
 
   render() {

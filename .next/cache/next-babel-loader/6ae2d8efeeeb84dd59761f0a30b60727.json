@@ -1,0 +1,1 @@
+{"ast":null,"code":"// It is important to duplicate /blog/article/[slug] because of subdomain routing\nimport { Details } from \"../../../components/blog/Details\";\nexport default Details;","map":null,"metadata":{},"sourceType":"module"}
